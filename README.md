@@ -32,7 +32,7 @@ flowchart LR
 
 This guide documents the AWS configuration used for the **StyleSync – MLOps Project**.  
 It explains how we created our AWS account, IAM user, installed and configured the AWS CLI,  
-and prepared an S3 bucket for future data and model storage.
+and prepared an S3 bucket and EC2 instance for future data and model storage.
 
 ---
 
@@ -137,7 +137,7 @@ stylesync-mlops-data/
 
 ### Step 5 — Upload Dataset to S3 (from Local Machine)
 
-Since the Kaggle GPU is unavailable, and the dataset is already downloaded locally,  
+If the dataset is already downloaded locally,  
 upload it directly to the S3 bucket using the AWS CLI.
 
 #### Command
@@ -165,21 +165,21 @@ We’ll use an EC2 Ubuntu instance to host the MLflow Tracking UI and connect it
 
 - Go to the EC2 Console
   - Click Launch instance → Configure:
-  - Name: mlflow-server
-  - AMI: Ubuntu Server 24.04 LTS (HVM), SSD Volume Type
-  - Architecture: 64-bit (x86)
-  - Instance type: t3.micro (Free tier eligible)
-  - Key pair: Create new → name it `mlops-key.pem` → download and keep safe.
+    - Name: `mlflow-server`
+    - AMI: `Ubuntu` Server 24.04 LTS (HVM), SSD Volume Type
+    - Architecture: `64-bit (x86)`
+    - Instance type: `t3.micro` (Free tier eligible)
+    - Key pair: Create new → name it `mlops-key.pem` → download and keep safe.
   - Network settings:
-  - Auto-assign public IP → Enable
-  - Create a new Security Group → allow the following:
-  ```bash
-  Type        Protocol  Port Range  Source
-  SSH          TCP        22         0.0.0.0/0
-  HTTP         TCP        80         0.0.0.0/0
-  Custom TCP   TCP        5000       0.0.0.0/0   # For MLflow UI
-  ```
-- Storage: 20 GiB (gp3).
+    - Auto-assign public IP → Enable
+    - Create a new Security Group → allow the following:
+    ```bash
+    Type        Protocol  Port Range  Source
+    SSH          TCP        22         0.0.0.0/0
+    HTTP         TCP        80         0.0.0.0/0
+    Custom TCP   TCP        5000       0.0.0.0/0   # For MLflow UI
+    ```
+    - Storage: 20 GiB (gp3).
 
 - Click **Launch instance**, then wait for the status to show **Running**.
 
