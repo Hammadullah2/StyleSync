@@ -1,13 +1,13 @@
 mlflow
 prometheus_client==0.23.1
 evidently==0.4.15
-psutil==7.1.2
+# Relax psutil pin to avoid dependency conflicts with other packages
+psutil>=5.8,<6
 numpy
 pandas
 matplotlib
 seaborn
 scikit-learn
-mlflow
 boto3
 sqlalchemy
 fastapi
