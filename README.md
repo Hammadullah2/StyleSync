@@ -261,7 +261,7 @@ You should now see the MLflow UI running live on your EC2 instance.
 
 ![evidentlyai](https://github.com/user-attachments/assets/7066361d-9cca-4bbe-a1cb-15a35daf7782)
 
-#### Prometheus + Grafana stack
+#### Prometheus 
 
 
 ![prometheus](https://github.com/user-attachments/assets/7968b036-1f85-4277-8162-fd09e9b545cc)
