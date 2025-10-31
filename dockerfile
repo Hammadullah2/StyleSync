@@ -8,8 +8,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 5000  # MLflow
-EXPOSE 8000  # FastAPI
+EXPOSE 5000  
+# MLflow
+EXPOSE 8000  
+# FastAPI
 
 # ---------- CMD ----------
 CMD bash -c "\
