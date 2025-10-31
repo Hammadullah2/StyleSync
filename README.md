@@ -132,6 +132,7 @@ stylesync-mlops-data/
 *S3 will automatically create these folders when files are uploaded. Creating them now helps organize project data clearly.*
 
 
+![s3](https://github.com/user-attachments/assets/94980ce3-5d21-4e29-abba-3e789e56b652)
 
 ---
 
@@ -196,6 +197,8 @@ You’ll now be inside the EC2 instance:
 ```bash
 ubuntu@ip-xxx-xx-xx-xxx:~$
 ```
+![ec2](https://github.com/user-attachments/assets/6b9ef881-0fa1-45bb-ab39-8041efafc20e)
+
 
 #### Setup MLflow Tracking Server on EC2
 1. Create and activate a virtual environment (important)
@@ -250,3 +253,5 @@ tail -f mlflow.log
 Open this in your local browser: `http://<your-ec2-public-ip>:5000` 
 
 You should now see the MLflow UI running live on your EC2 instance.
+
+![mlflow](https://github.com/user-attachments/assets/5e5d6ef8-15f0-4e50-81c3-92ec56adfcd7)
