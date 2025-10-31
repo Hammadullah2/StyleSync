@@ -255,3 +255,13 @@ Open this in your local browser: `http://<your-ec2-public-ip>:5000`
 You should now see the MLflow UI running live on your EC2 instance.
 
 ![mlflow](https://github.com/user-attachments/assets/5e5d6ef8-15f0-4e50-81c3-92ec56adfcd7)
+
+
+#### Evidently Dashboard for data drift 
+
+![evidentlyai](https://github.com/user-attachments/assets/7066361d-9cca-4bbe-a1cb-15a35daf7782)
+
+#### Prometheus + Grafana stack
+
+
+![prometheus](https://github.com/user-attachments/assets/7968b036-1f85-4277-8162-fd09e9b545cc)
