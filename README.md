@@ -1,4 +1,4 @@
-# StyleSync – A Multi-Modal Fashion Recommendation System
+# StyleSync – A Multi-Modal Fashion Recommendation System.
 
 A production-ready MLOps system to classify fashion attributes and power a multi-modal style advisor.
 
