@@ -21,6 +21,12 @@ jobs:
         with:
           python-version: "3.10"
 
+      - name: Cleanup disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/lib/android   
+
       # --- Install dependencies ---
       - name: Install dependencies
         run: |
