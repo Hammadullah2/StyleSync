@@ -27,36 +27,42 @@ flowchart LR
   Inference --> Evidently["Evidently\nDrift dashboard"]
 ```
 ---
+## Windows Users
+- Please install WSL2 (Ubuntu recommended).
+- Open your WSL terminal in the project folder.
+- Run `make dev`.
+
+---
 
 ## AWS Cloud Setup (Free-Tier Hybrid MLOps Workflow)
 
-This guide documents the AWS configuration used for the **StyleSync – MLOps Project**.  
-It explains how we created our AWS account, IAM user, installed and configured the AWS CLI,  
+This guide documents the AWS configuration used for the **StyleSync – MLOps Project**.
+It explains how we created our AWS account, IAM user, installed and configured the AWS CLI,
 and prepared an S3 bucket and EC2 instance for future data and model storage.
 
 ---
 
 ### Step 1 — Create an AWS Account
-1. Visit [https://aws.amazon.com/](https://aws.amazon.com/) and sign up for a new account.  
-2. Enable **Free Tier** usage during registration.  
-3. Verify your phone number and add a debit/credit card (required for activation).  
+1. Visit [https://aws.amazon.com/](https://aws.amazon.com/) and sign up for a new account.
+2. Enable **Free Tier** usage during registration.
+3. Verify your phone number and add a debit/credit card (required for activation).
 4. After confirmation, log in to the **AWS Management Console**.
 
 ---
 
 ###  Step 2 — Create an IAM User for CLI / Kaggle Access
-1. Open the **IAM Console** → [Users → Create user](https://console.aws.amazon.com/iam/home#/users).  
-2. **User name:** `mlops-user`  
-3. (Optional) Check **Provide user access to the AWS Management Console** if you also want password sign-in.  
-4. Click **Next**.  
-5. Under **Set permissions**, choose **Attach policies directly** and select:  
-   -  `AmazonS3FullAccess`  
-   - (Optional) `AmazonEC2FullAccess` for later EC2 use  
-6. Click **Create user**.  
-7. After creation:  
-   - Open the new user → **Security credentials** tab.  
-   - Scroll to **Access keys** → click **Create access key**.  
-   - Choose **Use case: Command Line Interface (CLI)** → **Next** → **Create access key**.  
+1. Open the **IAM Console** → [Users → Create user](https://console.aws.amazon.com/iam/home#/users).
+2. **User name:** `mlops-user`
+3. (Optional) Check **Provide user access to the AWS Management Console** if you also want password sign-in.
+4. Click **Next**.
+5. Under **Set permissions**, choose **Attach policies directly** and select:
+   -  `AmazonS3FullAccess`
+   - (Optional) `AmazonEC2FullAccess` for later EC2 use
+6. Click **Create user**.
+7. After creation:
+   - Open the new user → **Security credentials** tab.
+   - Scroll to **Access keys** → click **Create access key**.
+   - Choose **Use case: Command Line Interface (CLI)** → **Next** → **Create access key**.
    - **Download the `.csv` file** containing:
      ```
      AWS_ACCESS_KEY_ID
@@ -70,9 +76,9 @@ and prepared an S3 bucket and EC2 instance for future data and model storage.
 ### Step 3 — Install & Configure AWS CLI (on local machine)
 
 #### Install the AWS CLI
-- Download the 64-bit Windows installer:  
-  [https://awscli.amazonaws.com/AWSCLIV2.msi](https://awscli.amazonaws.com/AWSCLIV2.msi)  
-- Run the installer (keep defaults).  
+- Download the 64-bit Windows installer:
+  [https://awscli.amazonaws.com/AWSCLIV2.msi](https://awscli.amazonaws.com/AWSCLIV2.msi)
+- Run the installer (keep defaults).
 - Open a **new PowerShell** window and verify:
   ```bash
   aws --version
@@ -84,7 +90,7 @@ and prepared an S3 bucket and EC2 instance for future data and model storage.
 #### Configure the AWS CLI
 - Run the following command:
   ```bash
-  aws configure  
+  aws configure
 - Enter the values from your downloaded .csv file (created when setting up the IAM user):
   ```bash
   AWS Access Key ID [None]: <your key>
@@ -106,8 +112,8 @@ and prepared an S3 bucket and EC2 instance for future data and model storage.
 
 ### Step 4 — Create an S3 Bucket for Data and Models
 
-1. Open the [S3 Console](https://s3.console.aws.amazon.com/s3/home).  
-2. Click **Create bucket**.  
+1. Open the [S3 Console](https://s3.console.aws.amazon.com/s3/home).
+2. Click **Create bucket**.
 3. Configure:
    - **Bucket name:** `stylesync-mlops-data` *(must be globally unique)*
    - **Region:** `us-east-1`
@@ -137,7 +143,7 @@ stylesync-mlops-data/
 
 ### Step 5 — Upload Dataset to S3 (from Local Machine)
 
-If the dataset is already downloaded locally,  
+If the dataset is already downloaded locally,
 upload it directly to the S3 bucket using the AWS CLI.
 
 #### Command
@@ -247,6 +253,6 @@ tail -f mlflow.log
 
 #### Verify MLflow Dashboard
 
-Open this in your local browser: `http://<your-ec2-public-ip>:5000` 
+Open this in your local browser: `http://<your-ec2-public-ip>:5000`
 
 You should now see the MLflow UI running live on your EC2 instance.

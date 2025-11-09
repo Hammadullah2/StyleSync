@@ -1,17 +1,61 @@
-mlflow
-prometheus_client==0.23.1
+# mlflow
+# prometheus_client==0.23.1
+# evidently==0.4.15
+# psutil==7.1.2
+# numpy
+# pandas
+# matplotlib
+# seaborn
+# scikit-learn
+# mlflow
+# boto3
+# sqlalchemy
+# fastapi
+# uvicorn
+# torch
+# torchvision
+# Pillow
+# evidently==0.4.15
+# fastapi>=0.100.0,<0.101.0
+# uvicorn[standard]==0.22.0
+# pydantic==1.10.10
+# pytest==7.4.0
+# requests==2.31.0
+# prometheus-client==0.16.0
+# pre-commit==3.4.0
+# ruff==0.1.0
+# black==24.8.0
+# pip-audit==2.4.0
+
+# Core
+fastapi==0.100.1
+uvicorn[standard]==0.22.0
+pydantic==1.10.10
 evidently==0.4.15
-psutil==7.1.2
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-mlflow
-boto3
-sqlalchemy
-fastapi
-uvicorn
-torch
-torchvision
-Pillow
+pandas==2.3.3
+numpy==1.26.4
+scikit-learn==1.7.2
+statsmodels==0.14.5
+scipy==1.15.3
+nltk==3.9.2
+plotly==6.4.0
+
+# Dev / Testing
+pytest==7.4.0
+black==24.8.0
+ruff==0.1.0
+pre-commit==3.4.0
+pip-audit==2.4.0
+
+# FastAPI helper packages
+fastapi-restful==0.6.0
+typing-inspect==0.9.0
+prometheus-client==0.16.0
+watchdog==6.0.0
+typer==0.20.0
+rich==14.2.0
+
+# Optional / dependencies for Evidently
+fsspec==2025.10.0
+PyYAML==6.0.3
+iterative-telemetry==0.0.10
