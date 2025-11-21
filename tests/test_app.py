@@ -7,7 +7,13 @@ client = TestClient(app)
 def test_health():
     r = client.get("/health")
     assert r.status_code == 200
-    assert "ok" in r.json()
+    assert r.json() == {"status": "ok"}
+
+
+def test_root():
+    r = client.get("/")
+    assert r.status_code == 200
+    assert "Welcome to StyleSync" in r.json()["message"]
 
 
 def test_predict():
@@ -15,3 +21,5 @@ def test_predict():
     assert r.status_code == 200
     body = r.json()
     assert set(body.keys()) == {"label", "tokens_used"}
+    assert body["label"] == "positive"
+    assert body["tokens_used"] == 3
