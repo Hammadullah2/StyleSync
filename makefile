@@ -5,7 +5,7 @@ PRECOMMIT := $(VENV)/bin/pre-commit
 RM := rm -rf
 FIND := find . -name "__pycache__" -type d -exec rm -rf {} +
 
-.PHONY: dev venv install-deps pre-commit fastapi evidently start-servers test lint docker run-docker audit clean
+.PHONY: dev venv install-deps pre-commit fastapi evidently mlflow start-servers test lint docker run-docker audit clean
 
 # Default dev command
 dev: venv install-deps pre-commit start-servers
@@ -46,6 +46,10 @@ fastapi:
 evidently:
 	@echo "Starting Evidently monitoring report..."
 	@$(PYTHON) src/app/monitoring/evidently_report.py serve
+
+mlflow:
+	@echo "Starting MLflow on localhost:5000 ..."
+	@bash mlflow.sh
 
 # Start both servers concurrently
 start-servers:
