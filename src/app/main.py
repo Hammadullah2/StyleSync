@@ -34,18 +34,6 @@ s3_client = boto3.client(
 )
 
 
-# Data models
-class Product(BaseModel):
-    id: int
-    name: str
-    masterCategory: str
-    subCategory: str
-    baseColour: str
-    season: str
-    year: int
-    image_url: str
-
-
 class PredictionResult(BaseModel):
     category: str
     subcategory: str
@@ -88,58 +76,6 @@ def read_root():
 @app.get("/health")
 def health():
     return {"status": "ok"}
-
-
-@app.get("/products", response_model=List[Product])
-def list_products():
-    """Get products with pre-signed S3 URLs"""
-    response = []
-
-    if merged_df.empty:
-        # Return dummy products
-        for i in range(20):
-            response.append(
-                Product(
-                    id=i,
-                    name=f"Fashion Item {i}",
-                    masterCategory=["Apparel", "Footwear", "Accessories"][i % 3],
-                    subCategory="Sample",
-                    baseColour=["Blue", "Black", "White"][i % 3],
-                    season=["Summer", "Winter"][i % 2],
-                    year=2024,
-                    image_url=f"https://picsum.photos/300/200?random={i}",
-                )
-            )
-        return response
-
-    # Real data from S3
-    for category, group in merged_df.groupby("masterCategory"):
-        subset = group.head(8)
-        for _, row in subset.iterrows():
-            try:
-                s3_key = f"style-sync/raw/fashion/images/{row['filename']}"
-                url = s3_client.generate_presigned_url(
-                    "get_object",
-                    Params={"Bucket": os.getenv("S3_BUCKET"), "Key": s3_key},
-                    ExpiresIn=3600,
-                )
-            except Exception as e:
-                print(f"Error loading product image: {e}")
-                url = f"https://picsum.photos/300/200?random={row['id']}"
-
-            response.append(
-                Product(
-                    id=row["id"],
-                    name=row["productDisplayName"],
-                    masterCategory=row["masterCategory"],
-                    subCategory=row["subCategory"],
-                    baseColour=row["baseColour"],
-                    season=row["season"],
-                    year=int(row["year"]),
-                    image_url=url,
-                )
-            )
-    return response
 
 
 @app.post("/predict")
