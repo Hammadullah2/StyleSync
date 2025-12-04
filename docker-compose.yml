@@ -1,8 +1,32 @@
-version: "3.9"
 services:
+  backend:
+    build:
+      context: .
+      dockerfile: dockerfile.backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+      - ./requirements.txt:/app/requirements.txt
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+      - S3_BUCKET=${S3_BUCKET}
+
+  frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: dockerfile.frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/frontend:/app
+
   mlflow:
-    build: .
-    container_name: mlflow
+    build:
+      context: .
+      dockerfile: dockerfile.mlflow
     ports:
       - "5000:5000"
     environment:
@@ -16,7 +40,6 @@ services:
 
   prometheus:
     image: prom/prometheus
-    container_name: prometheus
     ports:
       - "9090:9090"
     volumes:
@@ -24,7 +47,6 @@ services:
 
   # grafana:
   #   image: grafana/grafana
-  #   container_name: grafana
   #   ports:
   #     - "3000:3000"
   #   environment:
@@ -32,7 +54,9 @@ services:
   #     - GF_SECURITY_ADMIN_PASSWORD=admin
 
   evidently:
-    build: ./evidently-dashboard
+    build:
+      context: .       # root directory
+      dockerfile: src/app/monitoring/dockerfile.evidently
     container_name: evidently
     ports:
       - "7000:7000"
