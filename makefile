@@ -10,6 +10,16 @@ FIND := find . -name "__pycache__" -type d -exec rm -rf {} +
 # Default dev command
 dev: venv install-deps pre-commit start-servers
 
+# EC2 dev command (pull latest + docker)
+dev-ec2:
+# 	@echo "Pulling latest code from repo..."
+# 	git pull origin main
+# 	@echo "Building Docker containers..."
+# 	docker compose build
+	@echo "Starting all containers..."
+	docker compose up -d
+	@echo "All services running on EC2!"
+
 # Create virtual environment
 venv:
 	@echo "Creating virtual environment..."
