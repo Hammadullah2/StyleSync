@@ -1,28 +1,24 @@
 global:
-  scrape_interval: 5s  # how often to collect metrics
+  scrape_interval: 5s      # how often to scrape metrics
+  evaluation_interval: 5s  # how often to evaluate rules
 
 scrape_configs:
-  # --- Prometheus itself ---
-  - job_name: 'prometheus'
+  # Backend / RAG API
+  - job_name: 'backend'
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['backend:8000']  # FastAPI service port with /metrics
 
-  # --- MLflow (if instrumented) ---
-  # You can expose custom metrics from MLflow server via a plugin or sidecar.
-  # If you just want to track its uptime, scrape the container itself.
+  # Evidently service for data drift / monitoring
+  - job_name: 'evidently'
+    static_configs:
+      - targets: ['evidently:7000']  # Port exposing metrics
+
+  # MLflow (optional, if you expose metrics like experiment count)
   - job_name: 'mlflow'
     static_configs:
       - targets: ['mlflow:5000']
 
-  # # --- GPU / Training metrics ---
-  # # These come from your Python training jobs via Prometheus Pushgateway
-  # - job_name: 'training-metrics'
-  #   honor_labels: true
-  #   static_configs:
-  #     - targets: ['pushgateway:9091']
-
-  # --- Node exporter for EC2 system metrics (optional) ---
-  # if you want CPU/memory stats of the EC2 instance
-  - job_name: 'node'
+  # Guardrails / safety metrics (optional, if exposed as a separate endpoint)
+  - job_name: 'guardrails'
     static_configs:
-      - targets: ['<EC2_PUBLIC_IP>:9100']
+      - targets: ['backend:8000']  # Assuming guardrail events are logged via backend
