@@ -128,11 +128,11 @@ After creation, open your bucket and create the following folder structure:
 ```bash
 stylesync-mlops-data/
 └── style-sync/
-├── raw/ # Original Kaggle dataset
-├── processed/ # Cleaned & augmented data
-├── models/ # Trained model artifacts
-├── mlflow/ # Experiment tracking
-└── monitoring/ # Drift reports & monitoring data
+  ├── raw/ # Original Kaggle dataset
+  ├── processed/ # Cleaned & augmented data
+  ├── models/ # Trained model artifacts
+  ├── mlflow/ # Experiment tracking
+  └── monitoring/ # Drift reports & monitoring data
 ```
 
 *S3 will automatically create these folders when files are uploaded. Creating them now helps organize project data clearly.*

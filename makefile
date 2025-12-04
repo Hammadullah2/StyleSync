@@ -5,7 +5,7 @@ PRECOMMIT := $(VENV)/bin/pre-commit
 RM := rm -rf
 FIND := find . -name "__pycache__" -type d -exec rm -rf {} +
 
-.PHONY: dev venv install-deps pre-commit fastapi evidently mlflow start-servers test lint docker run-docker audit clean
+.PHONY: dev venv install-deps pre-commit fastapi react evidently mlflow start-servers test lint docker run-docker audit clean
 
 # Default dev command
 dev: venv install-deps pre-commit start-servers
@@ -42,6 +42,10 @@ fastapi:
 	@echo "Starting FastAPI server at http://127.0.0.1:8000 ..."
 	@$(PYTHON) -m uvicorn src.app.main:app --reload --port 8000
 
+react:
+	@echo "Starting React development server at http://localhost:3000 ..."
+	@cd src/frontend && npm run dev
+
 # Start Evidently server
 evidently:
 	@echo "Starting Evidently monitoring report..."
@@ -53,7 +57,7 @@ mlflow:
 
 # Start both servers concurrently
 start-servers:
-	@$(MAKE) -j2 fastapi evidently
+	@$(MAKE) -j3 fastapi react evidently
 
 # Build Docker image
 docker:
