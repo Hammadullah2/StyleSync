@@ -128,11 +128,11 @@ After creation, open your bucket and create the following folder structure:
 ```bash
 stylesync-mlops-data/
 └── style-sync/
-├── raw/ # Original Kaggle dataset
-├── processed/ # Cleaned & augmented data
-├── models/ # Trained model artifacts
-├── mlflow/ # Experiment tracking
-└── monitoring/ # Drift reports & monitoring data
+  ├── raw/ # Original Kaggle dataset
+  ├── processed/ # Cleaned & augmented data
+  ├── models/ # Trained model artifacts
+  ├── mlflow/ # Experiment tracking
+  └── monitoring/ # Drift reports & monitoring data
 ```
 
 *S3 will automatically create these folders when files are uploaded. Creating them now helps organize project data clearly.*
@@ -256,3 +256,77 @@ tail -f mlflow.log
 Open this in your local browser: `http://<your-ec2-public-ip>:5000`
 
 You should now see the MLflow UI running live on your EC2 instance.
+
+
+# StyleSync Deployment Guide: EC2 & Local Development
+
+This guide outlines the steps for the initial, one-time setup of the **StyleSync** application on an AWS EC2 instance, and the daily workflow for development.
+
+---
+
+## 1. One-Time Setup on EC2
+
+These steps are required only once to prepare your EC2 environment.
+
+1.  **SSH into your EC2 instance**
+
+    Use your private key (`mlops-key.pem`) and the public IP of your EC2 instance.
+
+    ```bash
+    ssh -i "mlops-key.pem" ubuntu@<EC2_PUBLIC_IP>
+    ```
+
+2.  **Run the Setup Script**
+
+    Once logged in, execute the main setup script.
+
+    ```bash
+    bash start.sh
+    ```
+
+    **The `setup.sh` script automatically performs the following actions:**
+
+    * Updates system packages.
+    * Installs **Docker** and **Docker Compose**.
+    * Adds the `ubuntu` user to the `docker` group (for running Docker without `sudo`).
+    * Clones the **StyleSync** repository from the source.
+    * **Prompts for AWS credentials** and creates the necessary `.env` file for configuration.
+    * Builds and starts all application containers (frontend, backend, MLflow, Prometheus, Evidently).
+
+---
+
+## 2. Daily Development / EC2 Workflow
+
+Use this streamlined workflow to pull the latest code and restart all services for daily development or testing after the initial setup.
+
+After SSHing into the EC2 instance:
+
+1.  **Navigate to the project directory**
+
+    ```bash
+    cd StyleSync
+    ```
+
+2.  **Execute the development build command**
+
+    ```bash
+    make dev-ec2
+    ```
+
+    **The `make dev-ec2` command executes the following tasks:**
+
+    <!-- * Pulls the latest code from the default branch of the repository.
+    * Re-builds all necessary Docker containers. -->
+    * Starts all defined services in detached mode.
+
+### Access Endpoints
+
+All services will be accessible via your EC2 instance's public IP address:
+
+| Service | Access URL | Port |
+| :--- | :--- | :--- |
+| **Frontend** (Website) | `http://<EC2_PUBLIC_IP>:3000` | `3000` |
+| **Backend** (API) | `http://<EC2_PUBLIC_IP>:8000` | `8000` |
+| **MLflow** (Experiment Tracking) | `http://<EC2_PUBLIC_IP>:5000` | `5000` |
+| **Prometheus** (Monitoring) | `http://<EC2_PUBLIC_IP>:9090` | `9090` |
+| **Evidently** (Data Quality/Drift) | `http://<EC2_PUBLIC_IP>:7000` | `7000` |

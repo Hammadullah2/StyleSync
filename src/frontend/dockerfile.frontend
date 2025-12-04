@@ -1,0 +1,19 @@
+# Dockerfile.frontend
+FROM node:20
+
+WORKDIR /app
+
+# Copy package files first
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the frontend code
+COPY . .
+
+# Expose Next.js dev server port
+EXPOSE 3000
+
+# Start dev server
+CMD ["npm", "run", "dev"]

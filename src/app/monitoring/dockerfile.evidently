@@ -1,0 +1,24 @@
+# Dockerfile.evidently
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends curl git && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy requirements.txt (make sure it has evidently and other dependencies)
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt evidently pandas matplotlib seaborn
+
+# Copy Evidently script
+COPY src/app/monitoring/evidently_report.py .
+
+# Expose port (if you are running a web server or dashboard)
+EXPOSE 7000
+
+# Run Evidently report script
+CMD ["python", "evidently_report.py"]

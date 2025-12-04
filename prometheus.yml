@@ -1,11 +1,12 @@
 global:
-  scrape_interval: 5s  # how often to collect metrics
+  scrape_interval: 5s      # how often to scrape metrics
+  evaluation_interval: 5s  # how often to evaluate rules
 
 scrape_configs:
-  # --- Prometheus itself ---
-  - job_name: 'prometheus'
+  # Backend / RAG API
+  - job_name: 'backend'
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['backend:8000']  # FastAPI service port with /metrics
 
   # --- StyleSync API (LLM metrics) ---
   - job_name: 'stylesync-api'
