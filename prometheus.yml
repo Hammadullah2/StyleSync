@@ -8,17 +8,19 @@ scrape_configs:
     static_configs:
       - targets: ['backend:8000']  # FastAPI service port with /metrics
 
-  # Evidently service for data drift / monitoring
-  - job_name: 'evidently'
+  # --- StyleSync API (LLM metrics) ---
+  - job_name: 'stylesync-api'
     static_configs:
-      - targets: ['evidently:7000']  # Port exposing metrics
+      - targets: ['host.docker.internal:8000']
+    metrics_path: /metrics
 
-  # MLflow (optional, if you expose metrics like experiment count)
+  # --- MLflow (if instrumented) ---
   - job_name: 'mlflow'
     static_configs:
       - targets: ['mlflow:5000']
 
-  # Guardrails / safety metrics (optional, if exposed as a separate endpoint)
-  - job_name: 'guardrails'
+  # --- Node exporter for EC2 system metrics (optional) ---
+  - job_name: 'node'
     static_configs:
-      - targets: ['backend:8000']  # Assuming guardrail events are logged via backend
+      - targets: ['localhost:9100']
+

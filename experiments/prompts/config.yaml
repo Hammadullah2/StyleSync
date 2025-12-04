@@ -1,0 +1,38 @@
+# Prompt Engineering Configuration
+
+experiment:
+  name: "StyleSync-Prompt-Engineering"
+  description: "Comparing prompting strategies for fashion advice generation"
+
+strategies:
+  - name: "zero_shot"
+    description: "Baseline - direct prompt without examples"
+    enabled: true
+    
+  - name: "few_shot"
+    description: "Example-driven prompting"
+    enabled: true
+    params:
+      k_values: [3, 5]
+      
+  - name: "chain_of_thought"
+    description: "Step-by-step reasoning"
+    enabled: true
+
+metrics:
+  quantitative:
+    - name: "cosine_similarity"
+      description: "Embedding similarity between response and ground truth"
+      
+  qualitative:
+    - name: "factuality"
+      scale: "1-5"
+      description: "Is the response factually accurate?"
+      
+    - name: "helpfulness"
+      scale: "1-5"
+      description: "Is the response helpful to the user?"
+
+evaluation:
+  data_path: "data/eval.jsonl"
+  sample_size: 20

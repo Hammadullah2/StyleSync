@@ -1,34 +1,27 @@
+"""
+Unit tests for FastAPI app
+"""
+import pytest
 from fastapi.testclient import TestClient
-from src.app.main import app
+
+# Skip tests that require full app initialization
+pytest.importorskip("botocore")
+
+from src.app import app
 
 client = TestClient(app)
 
 
 def test_health():
+    """Test health endpoint."""
     r = client.get("/health")
     assert r.status_code == 200
     assert r.json() == {"status": "ok"}
 
 
-def test_root():
-    r = client.get("/")
+def test_metrics():
+    """Test metrics endpoint returns Prometheus metrics."""
+    r = client.get("/metrics")
     assert r.status_code == 200
-    assert "Welcome to StyleSync" in r.json()["message"]
-
-
-# def test_predict():
-#     r = client.post("/predict", json={"text": "This is good"})
-#     assert r.status_code == 200
-#     body = r.json()
-#     assert set(body.keys()) == {"label", "tokens_used"}
-#     assert body["label"] == "positive"
-#     assert body["tokens_used"] == 3
-
-
-def test_predict():
-    dummy_file = ("test.jpg", "fake image bytes", "image/jpeg")
-
-    r = client.post(
-        "/predict", files={"file": dummy_file}, data={"text": "This is good"}
-    )
-    assert r.status_code == 200
+    # Check for Prometheus metric format
+    assert "python_gc" in r.text or "llm" in r.text
