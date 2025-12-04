@@ -7,22 +7,19 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
 
+  # --- StyleSync API (LLM metrics) ---
+  - job_name: 'stylesync-api'
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+    metrics_path: /metrics
+
   # --- MLflow (if instrumented) ---
-  # You can expose custom metrics from MLflow server via a plugin or sidecar.
-  # If you just want to track its uptime, scrape the container itself.
   - job_name: 'mlflow'
     static_configs:
       - targets: ['mlflow:5000']
 
-  # # --- GPU / Training metrics ---
-  # # These come from your Python training jobs via Prometheus Pushgateway
-  # - job_name: 'training-metrics'
-  #   honor_labels: true
-  #   static_configs:
-  #     - targets: ['pushgateway:9091']
-
   # --- Node exporter for EC2 system metrics (optional) ---
-  # if you want CPU/memory stats of the EC2 instance
   - job_name: 'node'
     static_configs:
-      - targets: ['<EC2_PUBLIC_IP>:9100']
+      - targets: ['localhost:9100']
+

@@ -61,3 +61,16 @@ rich==14.2.0
 fsspec==2025.10.0
 PyYAML==6.0.3
 iterative-telemetry==0.0.10
+
+# RAG Pipeline Dependencies
+fastapi
+uvicorn
+boto3
+langchain-chroma
+langchain-google-genai
+langchain-experimental
+open_clip_torch
+pandas
+python-dotenv
+langsmith
+kagglehub

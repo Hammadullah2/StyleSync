@@ -71,3 +71,37 @@ clean:
 	@echo "Cleaning environment..."
 	@$(RM) $(VENV)
 	@$(FIND)
+
+# RAG Pipeline - Full end-to-end reproducibility
+.PHONY: rag rag-ingest rag-api rag-test
+
+rag: rag-ingest rag-test
+	@echo "RAG pipeline complete!"
+
+# Download vector database from S3 (if not exists)
+rag-ingest:
+	@echo "Checking for ChromaDB..."
+	@if not exist "chroma_db" ( \
+		echo "ChromaDB not found. Downloading from S3..." && \
+		python download_db.py \
+	) else ( \
+		echo "ChromaDB already exists." \
+	)
+
+# Start the RAG API server
+rag-api:
+	@echo "Starting RAG API server at http://127.0.0.1:8000 ..."
+	uvicorn src.app:app --reload --port 8000
+
+# Test the RAG endpoint
+rag-test:
+	@echo "Testing RAG endpoint..."
+	python test_api_local.py
+
+# Prompt Engineering Evaluation
+.PHONY: prompt-eval
+
+prompt-eval:
+	@echo "Running prompt engineering evaluation..."
+	python experiments/prompts/evaluate.py
+	@echo "View results: mlflow ui"

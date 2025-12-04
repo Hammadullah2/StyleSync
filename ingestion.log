@@ -1,0 +1,1389 @@
+2025-12-04 15:59:05,356 - INFO - Found credentials in environment variables.
+2025-12-04 15:59:05,745 - INFO - Loading styles.csv from S3...
+2025-12-04 15:59:11,785 - INFO - Loaded 44424 rows.
+2025-12-04 15:59:11,785 - INFO - Processing metadata...
+2025-12-04 15:59:12,649 - INFO - Loading OpenCLIP model: ViT-B-32...
+2025-12-04 15:59:12,649 - INFO - Parsing model identifier. Schema: None, Identifier: ViT-B-32
+2025-12-04 15:59:12,650 - INFO - Loaded built-in ViT-B-32 model config.
+2025-12-04 15:59:13,025 - INFO - Instantiating model architecture: CLIP
+2025-12-04 15:59:18,374 - INFO - Loading full pretrained weights from: C:\Users\hammad\.cache\huggingface\hub\models--laion--CLIP-ViT-B-32-laion2B-s34B-b79K\snapshots\1a25a446712ba5ee05982a381eed697ef9b435cf\open_clip_model.safetensors
+2025-12-04 15:59:21,390 - INFO - Final image preprocessing configuration set: {'size': (224, 224), 'mode': 'RGB', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'interpolation': 'bicubic', 'resize_mode': 'shortest', 'fill_color': 0}
+2025-12-04 15:59:21,393 - INFO - Model ViT-B-32 creation process complete.
+2025-12-04 15:59:21,417 - INFO - Parsing tokenizer identifier. Schema: None, Identifier: ViT-B-32
+2025-12-04 15:59:21,417 - INFO - Attempting to load config from built-in: ViT-B-32
+2025-12-04 15:59:21,417 - INFO - Using default SimpleTokenizer.
+2025-12-04 15:59:23,207 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-04 15:59:23,522 - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-12-04 15:59:23,525 - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-12-04 15:59:23,526 - ERROR - Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+2025-12-04 15:59:23,559 - INFO - Found 45 existing items in ChromaDB.
+2025-12-04 15:59:23,640 - INFO - Items to process: 44379
+2025-12-04 15:59:26,333 - WARNING - Failed to fetch 39386: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,334 - WARNING - Failed to fetch 46885: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,334 - WARNING - Failed to fetch 48123: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,334 - WARNING - Failed to fetch 42419: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,335 - WARNING - Failed to fetch 47957: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,339 - WARNING - Failed to fetch 53759: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,340 - WARNING - Failed to fetch 9204: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,340 - WARNING - Failed to fetch 59263: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,340 - WARNING - Failed to fetch 51832: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,340 - WARNING - Failed to fetch 47359: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,341 - WARNING - Failed to fetch 6842: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,341 - WARNING - Failed to fetch 9036: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,341 - WARNING - Failed to fetch 48311: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,341 - WARNING - Failed to fetch 7990: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,342 - WARNING - Failed to fetch 37812: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,342 - WARNING - Failed to fetch 56019: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,343 - WARNING - Failed to fetch 4729: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,343 - WARNING - Failed to fetch 56825: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,343 - WARNING - Failed to fetch 39988: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,343 - WARNING - Failed to fetch 59051: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,344 - WARNING - Failed to fetch 58183: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,344 - WARNING - Failed to fetch 3954: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,344 - WARNING - Failed to fetch 51658: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,344 - WARNING - Failed to fetch 8580: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,345 - WARNING - Failed to fetch 9452: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,346 - WARNING - Failed to fetch 38402: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,346 - WARNING - Failed to fetch 44984: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,347 - WARNING - Failed to fetch 45856: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,347 - WARNING - Failed to fetch 59435: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,347 - WARNING - Failed to fetch 5891: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,347 - WARNING - Failed to fetch 38630: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:26,347 - WARNING - Failed to fetch 4943: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,432 - WARNING - Failed to fetch 42841: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,432 - WARNING - Failed to fetch 6628: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,433 - WARNING - Failed to fetch 54924: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,433 - WARNING - Failed to fetch 59607: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,433 - WARNING - Failed to fetch 35913: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,433 - WARNING - Failed to fetch 45258: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,433 - WARNING - Failed to fetch 43993: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,434 - WARNING - Failed to fetch 49495: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,434 - WARNING - Failed to fetch 9660: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,434 - WARNING - Failed to fetch 54118: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,434 - WARNING - Failed to fetch 43369: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,434 - WARNING - Failed to fetch 56489: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,434 - WARNING - Failed to fetch 48781: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,435 - WARNING - Failed to fetch 49653: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,435 - WARNING - Failed to fetch 44970: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,435 - WARNING - Failed to fetch 8574: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,435 - WARNING - Failed to fetch 39524: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,435 - WARNING - Failed to fetch 52029: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,435 - WARNING - Failed to fetch 5865: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,435 - WARNING - Failed to fetch 58513: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,436 - WARNING - Failed to fetch 55802: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,436 - WARNING - Failed to fetch 39716: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,436 - WARNING - Failed to fetch 43967: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,436 - WARNING - Failed to fetch 42089: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,436 - WARNING - Failed to fetch 49461: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,436 - WARNING - Failed to fetch 9694: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:28,437 - WARNING - Failed to fetch 8746: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:35,443 - WARNING - Failed to fetch 34835: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:35,443 - WARNING - Failed to fetch 41268: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:35,443 - WARNING - Failed to fetch 59297: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:35,768 - WARNING - Failed to fetch 49839: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:36,129 - WARNING - Failed to fetch 54588: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:36,771 - WARNING - Failed to fetch 49005: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:37,220 - WARNING - Failed to fetch 8322: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:37,221 - WARNING - Failed to fetch 7158: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:37,530 - WARNING - Failed to fetch 8110: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:38,492 - WARNING - Failed to fetch 7964: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:38,493 - WARNING - Failed to fetch 36934: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:39,172 - WARNING - Failed to fetch 39140: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:39,560 - WARNING - Failed to fetch 41866: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:39,560 - WARNING - Failed to fetch 58177: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:39,560 - WARNING - Failed to fetch 44528: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:39,884 - WARNING - Failed to fetch 51455: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:48,922 - WARNING - Failed to fetch 6617: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:48,923 - WARNING - Failed to fetch 47530: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:48,923 - WARNING - Failed to fetch 42042: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:48,923 - WARNING - Failed to fetch 50587: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:48,923 - WARNING - Failed to fetch 43190: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:48,923 - WARNING - Failed to fetch 48578: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:48,923 - WARNING - Failed to fetch 54127: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:50,258 - WARNING - Failed to fetch 56670: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:50,258 - WARNING - Failed to fetch 5092: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:51,255 - WARNING - Failed to fetch 59638: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:51,566 - WARNING - Failed to fetch 4140: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:51,566 - WARNING - Failed to fetch 40527: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:51,567 - WARNING - Failed to fetch 36795: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:51,567 - WARNING - Failed to fetch 45869: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:51,567 - WARNING - Failed to fetch 53130: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 15:59:52,267 - WARNING - Failed to fetch 44187: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:02,932 - WARNING - Failed to fetch 35322: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:02,932 - WARNING - Failed to fetch 6425: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:02,933 - WARNING - Failed to fetch 51667: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:02,933 - WARNING - Failed to fetch 42270: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:03,670 - WARNING - Failed to fetch 56026: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:04,208 - WARNING - Failed to fetch 58980: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:04,584 - WARNING - Failed to fetch 40143: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:05,454 - WARNING - Failed to fetch 4716: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:06,149 - WARNING - Failed to fetch 52486: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:06,474 - WARNING - Failed to fetch 53554: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:06,474 - WARNING - Failed to fetch 47366: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:06,474 - WARNING - Failed to fetch 6041: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:07,274 - WARNING - Failed to fetch 9835: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:08,131 - WARNING - Failed to fetch 7193: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:17,432 - WARNING - Failed to fetch 9009: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:17,433 - WARNING - Failed to fetch 3533: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:17,433 - WARNING - Failed to fetch 42614: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:17,433 - WARNING - Failed to fetch 47154: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:17,433 - WARNING - Failed to fetch 35574: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:17,796 - WARNING - Failed to fetch 46086: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:17,797 - WARNING - Failed to fetch 51031: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:17,797 - WARNING - Failed to fetch 54543: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:18,201 - WARNING - Failed to fetch 55491: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:18,629 - WARNING - Failed to fetch 3701: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:18,629 - WARNING - Failed to fetch 42426: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:19,779 - WARNING - Failed to fetch 56214: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:19,779 - WARNING - Failed to fetch 40371: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:19,779 - WARNING - Failed to fetch 45603: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:19,779 - WARNING - Failed to fetch 4524: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:19,780 - WARNING - Failed to fetch 37223: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:21,208 - WARNING - Failed to fetch 53766: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:21,707 - WARNING - Failed to fetch 58974: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,563 - WARNING - Failed to fetch 58148: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,563 - WARNING - Failed to fetch 57100: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,563 - WARNING - Failed to fetch 52472: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,563 - WARNING - Failed to fetch 41859: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,563 - WARNING - Failed to fetch 36137: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,563 - WARNING - Failed to fetch 39943: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,564 - WARNING - Failed to fetch 5630: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,564 - WARNING - Failed to fetch 44517: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,564 - WARNING - Failed to fetch 50325: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,564 - WARNING - Failed to fetch 47392: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,564 - WARNING - Failed to fetch 8913: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,564 - WARNING - Failed to fetch 7167: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:37,565 - WARNING - Failed to fetch 46240: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:38,530 - WARNING - Failed to fetch 55657: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:38,530 - WARNING - Failed to fetch 6889: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:39,405 - WARNING - Failed to fetch 34452: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:39,804 - WARNING - Failed to fetch 6287: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:39,804 - WARNING - Failed to fetch 7355: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:40,210 - WARNING - Failed to fetch 46072: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:49,500 - WARNING - Failed to fetch 55465: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:49,501 - WARNING - Failed to fetch 43500: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:51,724 - WARNING - Failed to fetch 40385: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:51,725 - WARNING - Failed to fetch 5402: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:52,084 - WARNING - Failed to fetch 44725: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:52,084 - WARNING - Failed to fetch 7731: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:52,085 - WARNING - Failed to fetch 43958: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:52,085 - WARNING - Failed to fetch 50573: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:52,547 - WARNING - Failed to fetch 55001: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:52,547 - WARNING - Failed to fetch 8779: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:52,548 - WARNING - Failed to fetch 43164: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:00:53,480 - WARNING - Failed to fetch 57756: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,303 - WARNING - Failed to fetch 56684: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,303 - WARNING - Failed to fetch 44341: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,304 - WARNING - Failed to fetch 39729: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,304 - WARNING - Failed to fetch 4988: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,304 - WARNING - Failed to fetch 52224: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,304 - WARNING - Failed to fetch 45293: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,305 - WARNING - Failed to fetch 36761: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,305 - WARNING - Failed to fetch 41401: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,903 - WARNING - Failed to fetch 37481: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:04,903 - WARNING - Failed to fetch 5254: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:05,272 - WARNING - Failed to fetch 44173: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:05,633 - WARNING - Failed to fetch 4386: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:06,422 - WARNING - Failed to fetch 51693: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:06,745 - WARNING - Failed to fetch 46624: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:07,072 - WARNING - Failed to fetch 7503: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:07,509 - WARNING - Failed to fetch 50741: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:07,509 - WARNING - Failed to fetch 55233: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:17,567 - WARNING - Failed to fetch 43356: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:17,568 - WARNING - Failed to fetch 46278: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:17,568 - WARNING - Failed to fetch 7963: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:17,568 - WARNING - Failed to fetch 8117: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:17,568 - WARNING - Failed to fetch 49230: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:18,708 - WARNING - Failed to fetch 39147: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:19,430 - WARNING - Failed to fetch 36933: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:19,921 - WARNING - Failed to fetch 57138: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:19,921 - WARNING - Failed to fetch 41861: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:19,922 - WARNING - Failed to fetch 5608: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:19,922 - WARNING - Failed to fetch 58170: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:19,922 - WARNING - Failed to fetch 53598: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:20,319 - WARNING - Failed to fetch 39375: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:20,634 - WARNING - Failed to fetch 59290: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:20,635 - WARNING - Failed to fetch 52678: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:20,635 - WARNING - Failed to fetch 47198: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,217 - WARNING - Failed to fetch 39711: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,217 - WARNING - Failed to fetch 8325: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,217 - WARNING - Failed to fetch 43538: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,218 - WARNING - Failed to fetch 5862: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,219 - WARNING - Failed to fetch 46876: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,219 - WARNING - Failed to fetch 58726: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,219 - WARNING - Failed to fetch 36759: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,219 - WARNING - Failed to fetch 44379: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,219 - WARNING - Failed to fetch 51499: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,220 - WARNING - Failed to fetch 55805: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,221 - WARNING - Failed to fetch 7709: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,221 - WARNING - Failed to fetch 43960: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,221 - WARNING - Failed to fetch 8741: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,942 - WARNING - Failed to fetch 55039: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:32,942 - WARNING - Failed to fetch 34832: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:34,624 - WARNING - Failed to fetch 49654: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:35,016 - WARNING - Failed to fetch 48786: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,210 - WARNING - Failed to fetch 41439: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,211 - WARNING - Failed to fetch 52812: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,211 - WARNING - Failed to fetch 39523: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,211 - WARNING - Failed to fetch 44977: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,211 - WARNING - Failed to fetch 58514: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,211 - WARNING - Failed to fetch 38637: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,212 - WARNING - Failed to fetch 5896: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,212 - WARNING - Failed to fetch 4944: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,212 - WARNING - Failed to fetch 59600: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,212 - WARNING - Failed to fetch 42846: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,212 - WARNING - Failed to fetch 35128: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,212 - WARNING - Failed to fetch 47508: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,581 - WARNING - Failed to fetch 54923: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,581 - WARNING - Failed to fetch 43994: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:50,581 - WARNING - Failed to fetch 49492: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:51,247 - WARNING - Failed to fetch 9667: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:52,456 - WARNING - Failed to fetch 3953: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:01:52,871 - WARNING - Failed to fetch 8587: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:03,439 - WARNING - Failed to fetch 42248: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:03,439 - WARNING - Failed to fetch 38405: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:03,439 - WARNING - Failed to fetch 44983: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:03,439 - WARNING - Failed to fetch 9455: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:03,440 - WARNING - Failed to fetch 48772: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:03,440 - WARNING - Failed to fetch 53934: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:03,440 - WARNING - Failed to fetch 53108: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:03,440 - WARNING - Failed to fetch 59432: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:04,792 - WARNING - Failed to fetch 6079: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:05,170 - WARNING - Failed to fetch 9031: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:05,170 - WARNING - Failed to fetch 6845: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:05,493 - WARNING - Failed to fetch 59056: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:06,200 - WARNING - Failed to fetch 45409: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:06,200 - WARNING - Failed to fetch 56822: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:06,201 - WARNING - Failed to fetch 58184: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:06,578 - WARNING - Failed to fetch 40947: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:06,578 - WARNING - Failed to fetch 39381: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:17,555 - WARNING - Failed to fetch 51009: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:17,556 - WARNING - Failed to fetch 59264: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:17,556 - WARNING - Failed to fetch 7399: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:18,234 - WARNING - Failed to fetch 48124: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:18,967 - WARNING - Failed to fetch 9203: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:19,299 - WARNING - Failed to fetch 51835: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:19,299 - WARNING - Failed to fetch 3739: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:19,299 - WARNING - Failed to fetch 44948: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:19,299 - WARNING - Failed to fetch 57563: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:19,300 - WARNING - Failed to fetch 41406: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:20,119 - WARNING - Failed to fetch 44174: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:20,503 - WARNING - Failed to fetch 5253: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:21,491 - WARNING - Failed to fetch 4381: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:21,492 - WARNING - Failed to fetch 46623: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:21,853 - WARNING - Failed to fetch 7504: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:37,005 - WARNING - Failed to fetch 55234: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:37,005 - WARNING - Failed to fetch 51694: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:37,006 - WARNING - Failed to fetch 50746: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:37,006 - WARNING - Failed to fetch 3998: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:37,006 - WARNING - Failed to fetch 46411: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:37,006 - WARNING - Failed to fetch 7736: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:38,352 - WARNING - Failed to fetch 50574: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:38,352 - WARNING - Failed to fetch 55006: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:40,048 - WARNING - Failed to fetch 43163: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:41,680 - WARNING - Failed to fetch 58719: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:42,418 - WARNING - Failed to fetch 36766: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,937 - WARNING - Failed to fetch 6280: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,937 - WARNING - Failed to fetch 34455: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,938 - WARNING - Failed to fetch 7352: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,938 - WARNING - Failed to fetch 46075: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,939 - WARNING - Failed to fetch 35587: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,939 - WARNING - Failed to fetch 52223: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,940 - WARNING - Failed to fetch 45294: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,940 - WARNING - Failed to fetch 43507: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,940 - WARNING - Failed to fetch 55462: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,940 - WARNING - Failed to fetch 41250: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:51,941 - WARNING - Failed to fetch 40382: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:52,660 - WARNING - Failed to fetch 38298: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:52,983 - WARNING - Failed to fetch 57335: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:52,984 - WARNING - Failed to fetch 52647: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:53,307 - WARNING - Failed to fetch 53795: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:53,679 - WARNING - Failed to fetch 44722: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:54,236 - WARNING - Failed to fetch 5405: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:54,236 - WARNING - Failed to fetch 39178: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:02:54,236 - WARNING - Failed to fetch 57107: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,870 - WARNING - Failed to fetch 52475: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,870 - WARNING - Failed to fetch 39944: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,870 - WARNING - Failed to fetch 44510: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,870 - WARNING - Failed to fetch 58973: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,870 - WARNING - Failed to fetch 50322: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,871 - WARNING - Failed to fetch 36130: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,871 - WARNING - Failed to fetch 47395: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,871 - WARNING - Failed to fetch 46247: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,871 - WARNING - Failed to fetch 7160: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:03,871 - WARNING - Failed to fetch 8914: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:04,172 - WARNING - Failed to fetch 43735: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:05,219 - WARNING - Failed to fetch 55650: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:05,698 - WARNING - Failed to fetch 6274: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:05,698 - WARNING - Failed to fetch 47153: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:06,023 - WARNING - Failed to fetch 48927: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:06,023 - WARNING - Failed to fetch 51036: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:06,024 - WARNING - Failed to fetch 46081: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:06,344 - WARNING - Failed to fetch 35573: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:16,462 - WARNING - Failed to fetch 3706: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:16,463 - WARNING - Failed to fetch 56213: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:16,463 - WARNING - Failed to fetch 54544: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:16,463 - WARNING - Failed to fetch 55496: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:16,464 - WARNING - Failed to fetch 40376: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:16,464 - WARNING - Failed to fetch 4523: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:16,827 - WARNING - Failed to fetch 45604: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:16,827 - WARNING - Failed to fetch 53761: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:17,567 - WARNING - Failed to fetch 37224: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:18,229 - WARNING - Failed to fetch 56021: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:18,600 - WARNING - Failed to fetch 40144: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:18,600 - WARNING - Failed to fetch 58987: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:18,601 - WARNING - Failed to fetch 59069: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:18,601 - WARNING - Failed to fetch 52481: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:19,605 - WARNING - Failed to fetch 4711: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:19,606 - WARNING - Failed to fetch 40978: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:20,379 - WARNING - Failed to fetch 9832: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,074 - WARNING - Failed to fetch 47361: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,075 - WARNING - Failed to fetch 34693: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,075 - WARNING - Failed to fetch 48329: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,076 - WARNING - Failed to fetch 6046: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,077 - WARNING - Failed to fetch 51204: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,077 - WARNING - Failed to fetch 7194: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,078 - WARNING - Failed to fetch 3534: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,078 - WARNING - Failed to fetch 42613: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,368 - WARNING - Failed to fetch 57597: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:30,368 - WARNING - Failed to fetch 40520: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:31,021 - WARNING - Failed to fetch 44180: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:31,021 - WARNING - Failed to fetch 37472: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:31,733 - WARNING - Failed to fetch 53137: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:32,117 - WARNING - Failed to fetch 4375: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:32,118 - WARNING - Failed to fetch 35325: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:32,118 - WARNING - Failed to fetch 51660: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:32,118 - WARNING - Failed to fetch 6422: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:42,606 - WARNING - Failed to fetch 51452: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:42,607 - WARNING - Failed to fetch 42879: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:42,607 - WARNING - Failed to fetch 6610: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:42,607 - WARNING - Failed to fetch 47537: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:43,856 - WARNING - Failed to fetch 42045: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:44,601 - WARNING - Failed to fetch 54120: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:44,602 - WARNING - Failed to fetch 9658: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:45,080 - WARNING - Failed to fetch 43197: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:45,080 - WARNING - Failed to fetch 38608: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:45,479 - WARNING - Failed to fetch 56677: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:46,608 - WARNING - Failed to fetch 5095: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:46,933 - WARNING - Failed to fetch 37640: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:46,933 - WARNING - Failed to fetch 4147: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:46,934 - WARNING - Failed to fetch 36792: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:47,254 - WARNING - Failed to fetch 45260: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,365 - WARNING - Failed to fetch 55833: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,366 - WARNING - Failed to fetch 46418: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,366 - WARNING - Failed to fetch 48582: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,366 - WARNING - Failed to fetch 42884: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,366 - WARNING - Failed to fetch 43956: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,366 - WARNING - Failed to fetch 8777: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,366 - WARNING - Failed to fetch 4986: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,367 - WARNING - Failed to fetch 39727: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,367 - WARNING - Failed to fetch 57758: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:03:59,367 - WARNING - Failed to fetch 5854: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:00,032 - WARNING - Failed to fetch 5068: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:01,007 - WARNING - Failed to fetch 39515: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:01,007 - WARNING - Failed to fetch 44941: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:01,476 - WARNING - Failed to fetch 45893: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:01,476 - WARNING - Failed to fetch 4388: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:01,476 - WARNING - Failed to fetch 58522: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:01,477 - WARNING - Failed to fetch 3991: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:01,477 - WARNING - Failed to fetch 9497: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,627 - WARNING - Failed to fetch 36905: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,627 - WARNING - Failed to fetch 39171: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,628 - WARNING - Failed to fetch 49662: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,628 - WARNING - Failed to fetch 57932: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,628 - WARNING - Failed to fetch 58146: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,628 - WARNING - Failed to fetch 40985: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,629 - WARNING - Failed to fetch 41857: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,629 - WARNING - Failed to fetch 59094: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,629 - WARNING - Failed to fetch 36139: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,629 - WARNING - Failed to fetch 7169: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,629 - WARNING - Failed to fetch 7955: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,629 - WARNING - Failed to fetch 8121: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:11,987 - WARNING - Failed to fetch 6887: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:12,304 - WARNING - Failed to fetch 49808: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:12,634 - WARNING - Failed to fetch 6289: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:13,513 - WARNING - Failed to fetch 8313: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:13,828 - WARNING - Failed to fetch 49034: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:13,828 - WARNING - Failed to fetch 47992: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:24,670 - WARNING - Failed to fetch 41259: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:24,670 - WARNING - Failed to fetch 38291: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:25,460 - WARNING - Failed to fetch 39185: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:25,460 - WARNING - Failed to fetch 56028: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:25,781 - WARNING - Failed to fetch 40971: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:26,147 - WARNING - Failed to fetch 52488: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:26,147 - WARNING - Failed to fetch 59060: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:26,148 - WARNING - Failed to fetch 4718: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:26,473 - WARNING - Failed to fetch 56814: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:27,277 - WARNING - Failed to fetch 47368: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:27,277 - WARNING - Failed to fetch 48320: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:27,278 - WARNING - Failed to fetch 9007: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:27,278 - WARNING - Failed to fetch 6873: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,062 - WARNING - Failed to fetch 42428: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,063 - WARNING - Failed to fetch 53768: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,064 - WARNING - Failed to fetch 48112: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,064 - WARNING - Failed to fetch 9235: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,064 - WARNING - Failed to fetch 59252: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,065 - WARNING - Failed to fetch 6619: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,065 - WARNING - Failed to fetch 54915: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,065 - WARNING - Failed to fetch 50589: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,065 - WARNING - Failed to fetch 42870: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,066 - WARNING - Failed to fetch 54129: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,448 - WARNING - Failed to fetch 48576: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,448 - WARNING - Failed to fetch 9651: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,958 - WARNING - Failed to fetch 8783: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:38,958 - WARNING - Failed to fetch 4972: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:39,354 - WARNING - Failed to fetch 38601: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:39,355 - WARNING - Failed to fetch 45269: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:39,355 - WARNING - Failed to fetch 59636: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:39,839 - WARNING - Failed to fetch 53902: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:39,840 - WARNING - Failed to fetch 38433: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:40,225 - WARNING - Failed to fetch 40529: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:40,226 - WARNING - Failed to fetch 59404: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:49,722 - WARNING - Failed to fetch 44189: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:49,722 - WARNING - Failed to fetch 3965: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:49,722 - WARNING - Failed to fetch 48744: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:49,724 - WARNING - Failed to fetch 51669: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:49,724 - WARNING - Failed to fetch 9463: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:50,505 - WARNING - Failed to fetch 49696: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:50,906 - WARNING - Failed to fetch 57303: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:51,720 - WARNING - Failed to fetch 41266: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:52,779 - WARNING - Failed to fetch 44714: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:52,779 - WARNING - Failed to fetch 5433: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:53,141 - WARNING - Failed to fetch 52671: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:53,141 - WARNING - Failed to fetch 59299: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:53,142 - WARNING - Failed to fetch 49837: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:53,518 - WARNING - Failed to fetch 7364: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:53,519 - WARNING - Failed to fetch 34463: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:04:53,924 - WARNING - Failed to fetch 47191: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,306 - WARNING - Failed to fetch 55454: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,307 - WARNING - Failed to fetch 46271: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,307 - WARNING - Failed to fetch 43531: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,307 - WARNING - Failed to fetch 54586: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,307 - WARNING - Failed to fetch 35783: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,307 - WARNING - Failed to fetch 7156: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,307 - WARNING - Failed to fetch 8922: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,308 - WARNING - Failed to fetch 50314: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,308 - WARNING - Failed to fetch 34651: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,308 - WARNING - Failed to fetch 6084: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,624 - WARNING - Failed to fetch 49239: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:02,625 - WARNING - Failed to fetch 43703: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:04,123 - WARNING - Failed to fetch 57131: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:04,124 - WARNING - Failed to fetch 40186: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:04,124 - WARNING - Failed to fetch 58945: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:04,514 - WARNING - Failed to fetch 59897: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:04,515 - WARNING - Failed to fetch 5601: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:04,515 - WARNING - Failed to fetch 53591: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:04,515 - WARNING - Failed to fetch 58179: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:04,516 - WARNING - Failed to fetch 39972: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:13,812 - WARNING - Failed to fetch 46615: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:13,813 - WARNING - Failed to fetch 52443: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:13,813 - WARNING - Failed to fetch 36106: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:13,814 - WARNING - Failed to fetch 41868: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:13,814 - WARNING - Failed to fetch 7532: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:14,204 - WARNING - Failed to fetch 43367: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:15,687 - WARNING - Failed to fetch 55202: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:16,675 - WARNING - Failed to fetch 57555: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:17,063 - WARNING - Failed to fetch 52027: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:17,064 - WARNING - Failed to fetch 36562: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:17,064 - WARNING - Failed to fetch 44142: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:18,204 - WARNING - Failed to fetch 5265: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:18,204 - WARNING - Failed to fetch 39718: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:28,478 - WARNING - Failed to fetch 57767: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:28,478 - WARNING - Failed to fetch 37682: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:28,478 - WARNING - Failed to fetch 50542: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:28,478 - WARNING - Failed to fetch 41602: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:28,478 - WARNING - Failed to fetch 36750: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:28,478 - WARNING - Failed to fetch 43969: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:28,478 - WARNING - Failed to fetch 46427: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:28,478 - WARNING - Failed to fetch 7700: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:29,816 - WARNING - Failed to fetch 42087: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:29,816 - WARNING - Failed to fetch 43155: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:29,816 - WARNING - Failed to fetch 8748: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:30,331 - WARNING - Failed to fetch 55030: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:30,331 - WARNING - Failed to fetch 50784: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:30,746 - WARNING - Failed to fetch 6414: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:31,093 - WARNING - Failed to fetch 35313: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:31,093 - WARNING - Failed to fetch 51656: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:32,532 - WARNING - Failed to fetch 43393: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:40,961 - WARNING - Failed to fetch 42241: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:40,962 - WARNING - Failed to fetch 40516: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:40,962 - WARNING - Failed to fetch 56473: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:40,962 - WARNING - Failed to fetch 4343: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:40,962 - WARNING - Failed to fetch 5291: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:40,963 - WARNING - Failed to fetch 53101: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:41,592 - WARNING - Failed to fetch 57793: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:43,023 - WARNING - Failed to fetch 4171: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:43,024 - WARNING - Failed to fetch 45256: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:43,024 - WARNING - Failed to fetch 59609: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:43,024 - WARNING - Failed to fetch 44384: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:43,025 - WARNING - Failed to fetch 37676: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:43,025 - WARNING - Failed to fetch 6626: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:43,368 - WARNING - Failed to fetch 47501: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:44,225 - WARNING - Failed to fetch 51464: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:44,590 - WARNING - Failed to fetch 54116: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:53,004 - WARNING - Failed to fetch 48549: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:53,004 - WARNING - Failed to fetch 42073: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:53,005 - WARNING - Failed to fetch 56225: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:53,005 - WARNING - Failed to fetch 39388: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:53,340 - WARNING - Failed to fetch 53757: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:54,113 - WARNING - Failed to fetch 37212: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:54,505 - WARNING - Failed to fetch 4515: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:54,876 - WARNING - Failed to fetch 45632: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,648 - WARNING - Failed to fetch 51000: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,649 - WARNING - Failed to fetch 7390: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,649 - WARNING - Failed to fetch 35545: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,649 - WARNING - Failed to fetch 6242: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,649 - WARNING - Failed to fetch 47165: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,649 - WARNING - Failed to fetch 48911: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,650 - WARNING - Failed to fetch 42417: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,650 - WARNING - Failed to fetch 3730: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,650 - WARNING - Failed to fetch 54572: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:05:55,967 - WARNING - Failed to fetch 46285: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,272 - WARNING - Failed to fetch 35777: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,273 - WARNING - Failed to fetch 9804: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,274 - WARNING - Failed to fetch 6070: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,274 - WARNING - Failed to fetch 51232: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,274 - WARNING - Failed to fetch 47357: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,275 - WARNING - Failed to fetch 42625: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,275 - WARNING - Failed to fetch 3502: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,276 - WARNING - Failed to fetch 9038: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:05,276 - WARNING - Failed to fetch 54740: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:06,198 - WARNING - Failed to fetch 40172: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:06,998 - WARNING - Failed to fetch 59863: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:07,319 - WARNING - Failed to fetch 56017: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:08,076 - WARNING - Failed to fetch 53565: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:09,056 - WARNING - Failed to fetch 4727: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:09,057 - WARNING - Failed to fetch 45400: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:09,057 - WARNING - Failed to fetch 39986: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:09,416 - WARNING - Failed to fetch 38434: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:09,416 - WARNING - Failed to fetch 53905: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:17,428 - WARNING - Failed to fetch 57599: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:17,428 - WARNING - Failed to fetch 53139: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:17,429 - WARNING - Failed to fetch 3962: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:17,429 - WARNING - Failed to fetch 59403: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:17,429 - WARNING - Failed to fetch 9464: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:17,429 - WARNING - Failed to fetch 48743: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:18,776 - WARNING - Failed to fetch 47539: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:19,203 - WARNING - Failed to fetch 42877: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:19,709 - WARNING - Failed to fetch 9656: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:20,112 - WARNING - Failed to fetch 43199: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:20,495 - WARNING - Failed to fetch 35925: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:20,496 - WARNING - Failed to fetch 8784: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:20,496 - WARNING - Failed to fetch 4975: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:20,497 - WARNING - Failed to fetch 56679: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:20,498 - WARNING - Failed to fetch 38606: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:20,498 - WARNING - Failed to fetch 4149: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:20,498 - WARNING - Failed to fetch 59631: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:30,522 - WARNING - Failed to fetch 51038: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:30,522 - WARNING - Failed to fetch 55498: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:30,523 - WARNING - Failed to fetch 48929: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:30,523 - WARNING - Failed to fetch 48115: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:30,523 - WARNING - Failed to fetch 3708: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:30,524 - WARNING - Failed to fetch 47961: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:31,239 - WARNING - Failed to fetch 59255: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:31,972 - WARNING - Failed to fetch 58989: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:31,972 - WARNING - Failed to fetch 38050: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:32,481 - WARNING - Failed to fetch 39182: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:32,481 - WARNING - Failed to fetch 41098: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:32,482 - WARNING - Failed to fetch 56813: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:32,482 - WARNING - Failed to fetch 59067: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:33,228 - WARNING - Failed to fetch 6048: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:33,228 - WARNING - Failed to fetch 6874: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:33,537 - WARNING - Failed to fetch 9000: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:33,928 - WARNING - Failed to fetch 48327: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:42,469 - WARNING - Failed to fetch 49033: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:42,469 - WARNING - Failed to fetch 8314: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:42,470 - WARNING - Failed to fetch 35589: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:42,470 - WARNING - Failed to fetch 43509: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:42,470 - WARNING - Failed to fetch 47995: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:42,470 - WARNING - Failed to fetch 38296: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:42,816 - WARNING - Failed to fetch 39344: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:43,524 - WARNING - Failed to fetch 52649: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:44,197 - WARNING - Failed to fetch 57109: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:44,197 - WARNING - Failed to fetch 36902: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:44,198 - WARNING - Failed to fetch 39176: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:44,198 - WARNING - Failed to fetch 40982: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:44,715 - WARNING - Failed to fetch 58141: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:45,137 - WARNING - Failed to fetch 57935: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:45,138 - WARNING - Failed to fetch 59093: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:45,138 - WARNING - Failed to fetch 41850: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:45,138 - WARNING - Failed to fetch 46249: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:45,545 - WARNING - Failed to fetch 8126: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,856 - WARNING - Failed to fetch 45894: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,856 - WARNING - Failed to fetch 39512: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,856 - WARNING - Failed to fetch 7952: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,856 - WARNING - Failed to fetch 52823: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,856 - WARNING - Failed to fetch 6880: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,856 - WARNING - Failed to fetch 58525: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,857 - WARNING - Failed to fetch 41408: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,857 - WARNING - Failed to fetch 37488: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:55,857 - WARNING - Failed to fetch 50748: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:56,243 - WARNING - Failed to fetch 3996: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:57,483 - WARNING - Failed to fetch 9490: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:57,483 - WARNING - Failed to fetch 49665: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:57,484 - WARNING - Failed to fetch 8542: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:58,665 - WARNING - Failed to fetch 43951: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:59,050 - WARNING - Failed to fetch 55834: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:59,432 - WARNING - Failed to fetch 42883: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:59,432 - WARNING - Failed to fetch 48585: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:06:59,906 - WARNING - Failed to fetch 34803: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:11,276 - WARNING - Failed to fetch 39720: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:11,277 - WARNING - Failed to fetch 55008: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:11,277 - WARNING - Failed to fetch 36768: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:11,277 - WARNING - Failed to fetch 44348: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:11,277 - WARNING - Failed to fetch 5853: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:11,278 - WARNING - Failed to fetch 46282: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:11,278 - WARNING - Failed to fetch 47350: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:12,024 - WARNING - Failed to fetch 9803: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:12,024 - WARNING - Failed to fetch 3505: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:13,364 - WARNING - Failed to fetch 42622: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:14,089 - WARNING - Failed to fetch 48318: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:14,810 - WARNING - Failed to fetch 40175: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:15,220 - WARNING - Failed to fetch 56010: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:15,665 - WARNING - Failed to fetch 53562: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:16,482 - WARNING - Failed to fetch 40949: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:16,482 - WARNING - Failed to fetch 45407: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:29,759 - WARNING - Failed to fetch 39981: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:29,760 - WARNING - Failed to fetch 59058: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:29,760 - WARNING - Failed to fetch 56222: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:29,760 - WARNING - Failed to fetch 4720: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:29,761 - WARNING - Failed to fetch 37215: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:29,761 - WARNING - Failed to fetch 53750: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:29,761 - WARNING - Failed to fetch 52682: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:29,761 - WARNING - Failed to fetch 45635: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:31,129 - WARNING - Failed to fetch 4512: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:31,129 - WARNING - Failed to fetch 7397: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:31,528 - WARNING - Failed to fetch 35542: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:31,529 - WARNING - Failed to fetch 51007: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:31,529 - WARNING - Failed to fetch 48916: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:31,530 - WARNING - Failed to fetch 47162: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:31,530 - WARNING - Failed to fetch 6245: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:32,417 - WARNING - Failed to fetch 3737: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:32,417 - WARNING - Failed to fetch 42410: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:33,989 - WARNING - Failed to fetch 54575: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,746 - WARNING - Failed to fetch 56646: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,746 - WARNING - Failed to fetch 57794: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,747 - WARNING - Failed to fetch 5898: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,747 - WARNING - Failed to fetch 45251: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,747 - WARNING - Failed to fetch 38639: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,748 - WARNING - Failed to fetch 37671: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,748 - WARNING - Failed to fetch 44383: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,749 - WARNING - Failed to fetch 47506: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,749 - WARNING - Failed to fetch 6621: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:43,749 - WARNING - Failed to fetch 51463: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:44,098 - WARNING - Failed to fetch 42848: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:44,887 - WARNING - Failed to fetch 9669: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:44,888 - WARNING - Failed to fetch 54111: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:45,606 - WARNING - Failed to fetch 42074: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:45,606 - WARNING - Failed to fetch 47734: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:45,606 - WARNING - Failed to fetch 6413: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:46,725 - WARNING - Failed to fetch 50783: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:57,390 - WARNING - Failed to fetch 51651: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:57,391 - WARNING - Failed to fetch 8589: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:57,391 - WARNING - Failed to fetch 35314: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:57,391 - WARNING - Failed to fetch 43394: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:57,391 - WARNING - Failed to fetch 56474: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:59,317 - WARNING - Failed to fetch 40511: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:07:59,317 - WARNING - Failed to fetch 4344: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-12-04 16:20:48,718 - INFO - Ensuring dataset is downloaded via KaggleHub...
+2025-12-04 16:26:08,616 - INFO - Found credentials in environment variables.
+2025-12-04 16:26:08,947 - INFO - Loading styles.csv from S3...
+2025-12-04 16:28:43,516 - INFO - Loaded 44424 rows.
+2025-12-04 16:28:43,516 - INFO - Processing metadata...
+2025-12-04 16:28:44,585 - INFO - Loading OpenCLIP model: ViT-B-32...
+2025-12-04 16:28:44,585 - INFO - Parsing model identifier. Schema: None, Identifier: ViT-B-32
+2025-12-04 16:28:44,585 - INFO - Loaded built-in ViT-B-32 model config.
+2025-12-04 16:28:45,381 - INFO - Instantiating model architecture: CLIP
+2025-12-04 16:28:49,730 - INFO - Loading full pretrained weights from: C:\Users\hammad\.cache\huggingface\hub\models--laion--CLIP-ViT-B-32-laion2B-s34B-b79K\snapshots\1a25a446712ba5ee05982a381eed697ef9b435cf\open_clip_model.safetensors
+2025-12-04 16:28:51,276 - INFO - Final image preprocessing configuration set: {'size': (224, 224), 'mode': 'RGB', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'interpolation': 'bicubic', 'resize_mode': 'shortest', 'fill_color': 0}
+2025-12-04 16:28:51,277 - INFO - Model ViT-B-32 creation process complete.
+2025-12-04 16:28:51,280 - INFO - Parsing tokenizer identifier. Schema: None, Identifier: ViT-B-32
+2025-12-04 16:28:51,280 - INFO - Attempting to load config from built-in: ViT-B-32
+2025-12-04 16:28:51,281 - INFO - Using default SimpleTokenizer.
+2025-12-04 16:28:51,736 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-04 16:28:52,044 - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-12-04 16:28:52,047 - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-12-04 16:28:52,050 - ERROR - Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+2025-12-04 16:28:52,171 - INFO - Found 601 existing items.
+2025-12-04 16:28:52,231 - INFO - Items to process: 43823
+2025-12-04 16:28:55,610 - WARNING - Missing image: 53759
+2025-12-04 16:28:55,610 - WARNING - Missing image: 9204
+2025-12-04 16:28:55,611 - WARNING - Missing image: 46885
+2025-12-04 16:28:55,611 - WARNING - Missing image: 42419
+2025-12-04 16:28:55,611 - WARNING - Missing image: 39386
+2025-12-04 16:28:55,611 - WARNING - Missing image: 47957
+2025-12-04 16:28:55,611 - WARNING - Missing image: 48123
+2025-12-04 16:28:55,611 - WARNING - Missing image: 51832
+2025-12-04 16:28:55,612 - WARNING - Missing image: 47359
+2025-12-04 16:28:55,612 - WARNING - Missing image: 6842
+2025-12-04 16:28:55,612 - WARNING - Missing image: 9036
+2025-12-04 16:28:55,612 - WARNING - Missing image: 48311
+2025-12-04 16:28:55,612 - WARNING - Missing image: 7990
+2025-12-04 16:28:55,612 - WARNING - Missing image: 37812
+2025-12-04 16:28:55,613 - WARNING - Missing image: 4729
+2025-12-04 16:28:55,613 - WARNING - Missing image: 56825
+2025-12-04 16:28:55,613 - WARNING - Missing image: 59051
+2025-12-04 16:28:55,613 - WARNING - Missing image: 58183
+2025-12-04 16:28:55,613 - WARNING - Missing image: 51658
+2025-12-04 16:28:55,613 - WARNING - Missing image: 56019
+2025-12-04 16:28:55,613 - WARNING - Missing image: 3954
+2025-12-04 16:28:55,613 - WARNING - Missing image: 8580
+2025-12-04 16:28:55,614 - WARNING - Missing image: 59263
+2025-12-04 16:28:55,614 - WARNING - Missing image: 38402
+2025-12-04 16:28:55,614 - WARNING - Missing image: 44984
+2025-12-04 16:28:55,614 - WARNING - Missing image: 45856
+2025-12-04 16:28:55,614 - WARNING - Missing image: 59435
+2025-12-04 16:28:55,614 - WARNING - Missing image: 5891
+2025-12-04 16:28:55,614 - WARNING - Missing image: 9452
+2025-12-04 16:28:55,615 - WARNING - Missing image: 38630
+2025-12-04 16:28:55,615 - WARNING - Missing image: 4943
+2025-12-04 16:28:55,615 - WARNING - Missing image: 39988
+2025-12-04 16:28:56,509 - WARNING - Missing image: 42841
+2025-12-04 16:28:56,509 - WARNING - Missing image: 43993
+2025-12-04 16:28:56,509 - WARNING - Missing image: 45258
+2025-12-04 16:28:56,509 - WARNING - Missing image: 59607
+2025-12-04 16:28:56,510 - WARNING - Missing image: 6628
+2025-12-04 16:28:56,510 - WARNING - Missing image: 35913
+2025-12-04 16:28:56,510 - WARNING - Missing image: 49495
+2025-12-04 16:28:56,510 - WARNING - Missing image: 54924
+2025-12-04 16:28:56,510 - WARNING - Missing image: 9660
+2025-12-04 16:28:56,510 - WARNING - Missing image: 54118
+2025-12-04 16:28:56,511 - WARNING - Missing image: 48781
+2025-12-04 16:28:56,511 - WARNING - Missing image: 43369
+2025-12-04 16:28:56,511 - WARNING - Missing image: 49653
+2025-12-04 16:28:56,512 - WARNING - Missing image: 44970
+2025-12-04 16:28:56,512 - WARNING - Missing image: 8574
+2025-12-04 16:28:56,513 - WARNING - Missing image: 56489
+2025-12-04 16:28:56,513 - WARNING - Missing image: 39524
+2025-12-04 16:28:56,513 - WARNING - Missing image: 58513
+2025-12-04 16:28:56,513 - WARNING - Missing image: 52029
+2025-12-04 16:28:56,513 - WARNING - Missing image: 5865
+2025-12-04 16:28:56,514 - WARNING - Missing image: 55802
+2025-12-04 16:28:56,514 - WARNING - Missing image: 39716
+2025-12-04 16:28:56,514 - WARNING - Missing image: 43967
+2025-12-04 16:28:56,514 - WARNING - Missing image: 42089
+2025-12-04 16:28:56,514 - WARNING - Missing image: 49461
+2025-12-04 16:28:56,515 - WARNING - Missing image: 8746
+2025-12-04 16:28:56,515 - WARNING - Missing image: 9694
+2025-12-04 16:28:56,515 - WARNING - Missing image: 34835
+2025-12-04 16:28:56,515 - WARNING - Missing image: 41268
+2025-12-04 16:28:56,515 - WARNING - Missing image: 59297
+2025-12-04 16:28:56,515 - WARNING - Missing image: 54588
+2025-12-04 16:28:56,516 - WARNING - Missing image: 49839
+2025-12-04 16:28:57,608 - WARNING - Missing image: 8110
+2025-12-04 16:28:57,608 - WARNING - Missing image: 49005
+2025-12-04 16:28:57,609 - WARNING - Missing image: 36934
+2025-12-04 16:28:57,609 - WARNING - Missing image: 39140
+2025-12-04 16:28:57,609 - WARNING - Missing image: 41866
+2025-12-04 16:28:57,609 - WARNING - Missing image: 8322
+2025-12-04 16:28:57,609 - WARNING - Missing image: 7964
+2025-12-04 16:28:57,609 - WARNING - Missing image: 58177
+2025-12-04 16:28:57,609 - WARNING - Missing image: 51455
+2025-12-04 16:28:57,610 - WARNING - Missing image: 50587
+2025-12-04 16:28:57,610 - WARNING - Missing image: 47530
+2025-12-04 16:28:57,610 - WARNING - Missing image: 42042
+2025-12-04 16:28:57,610 - WARNING - Missing image: 44528
+2025-12-04 16:28:57,610 - WARNING - Missing image: 6617
+2025-12-04 16:28:57,610 - WARNING - Missing image: 48578
+2025-12-04 16:28:57,610 - WARNING - Missing image: 43190
+2025-12-04 16:28:57,611 - WARNING - Missing image: 56670
+2025-12-04 16:28:57,611 - WARNING - Missing image: 54127
+2025-12-04 16:28:57,611 - WARNING - Missing image: 5092
+2025-12-04 16:28:57,611 - WARNING - Missing image: 59638
+2025-12-04 16:28:57,611 - WARNING - Missing image: 4140
+2025-12-04 16:28:57,611 - WARNING - Missing image: 7158
+2025-12-04 16:28:57,611 - WARNING - Missing image: 53130
+2025-12-04 16:28:57,612 - WARNING - Missing image: 45869
+2025-12-04 16:28:57,612 - WARNING - Missing image: 36795
+2025-12-04 16:28:57,612 - WARNING - Missing image: 40527
+2025-12-04 16:28:57,612 - WARNING - Missing image: 44187
+2025-12-04 16:28:57,612 - WARNING - Missing image: 35322
+2025-12-04 16:28:57,612 - WARNING - Missing image: 51667
+2025-12-04 16:28:57,612 - WARNING - Missing image: 6425
+2025-12-04 16:28:57,612 - WARNING - Missing image: 42270
+2025-12-04 16:28:57,613 - WARNING - Missing image: 56026
+2025-12-04 16:28:58,897 - WARNING - Missing image: 58980
+2025-12-04 16:28:58,897 - WARNING - Missing image: 6041
+2025-12-04 16:28:58,898 - WARNING - Missing image: 9835
+2025-12-04 16:28:58,898 - WARNING - Missing image: 40143
+2025-12-04 16:28:58,898 - WARNING - Missing image: 47366
+2025-12-04 16:28:58,899 - WARNING - Missing image: 4716
+2025-12-04 16:28:58,899 - WARNING - Missing image: 52486
+2025-12-04 16:28:58,899 - WARNING - Missing image: 53554
+2025-12-04 16:28:58,899 - WARNING - Missing image: 7193
+2025-12-04 16:28:58,900 - WARNING - Missing image: 3533
+2025-12-04 16:28:58,900 - WARNING - Missing image: 9009
+2025-12-04 16:28:58,900 - WARNING - Missing image: 47154
+2025-12-04 16:28:58,900 - WARNING - Missing image: 35574
+2025-12-04 16:28:58,900 - WARNING - Missing image: 46086
+2025-12-04 16:28:58,900 - WARNING - Missing image: 51031
+2025-12-04 16:28:58,900 - WARNING - Missing image: 54543
+2025-12-04 16:28:58,900 - WARNING - Missing image: 3701
+2025-12-04 16:28:58,900 - WARNING - Missing image: 42426
+2025-12-04 16:28:58,901 - WARNING - Missing image: 56214
+2025-12-04 16:28:58,901 - WARNING - Missing image: 45603
+2025-12-04 16:28:58,901 - WARNING - Missing image: 40371
+2025-12-04 16:28:58,901 - WARNING - Missing image: 4524
+2025-12-04 16:28:58,901 - WARNING - Missing image: 37223
+2025-12-04 16:28:58,901 - WARNING - Missing image: 53766
+2025-12-04 16:28:58,901 - WARNING - Missing image: 58974
+2025-12-04 16:28:58,901 - WARNING - Missing image: 57100
+2025-12-04 16:28:58,901 - WARNING - Missing image: 36137
+2025-12-04 16:28:58,902 - WARNING - Missing image: 42614
+2025-12-04 16:28:58,902 - WARNING - Missing image: 41859
+2025-12-04 16:28:58,902 - WARNING - Missing image: 39943
+2025-12-04 16:28:58,902 - WARNING - Missing image: 52472
+2025-12-04 16:28:58,902 - WARNING - Missing image: 55491
+2025-12-04 16:28:59,825 - WARNING - Missing image: 58148
+2025-12-04 16:28:59,825 - WARNING - Missing image: 5630
+2025-12-04 16:28:59,826 - WARNING - Missing image: 50325
+2025-12-04 16:28:59,826 - WARNING - Missing image: 44517
+2025-12-04 16:28:59,826 - WARNING - Missing image: 47392
+2025-12-04 16:28:59,827 - WARNING - Missing image: 8913
+2025-12-04 16:28:59,827 - WARNING - Missing image: 46240
+2025-12-04 16:28:59,827 - WARNING - Missing image: 7167
+2025-12-04 16:28:59,827 - WARNING - Missing image: 6889
+2025-12-04 16:28:59,827 - WARNING - Missing image: 34452
+2025-12-04 16:28:59,827 - WARNING - Missing image: 55657
+2025-12-04 16:28:59,827 - WARNING - Missing image: 6287
+2025-12-04 16:28:59,827 - WARNING - Missing image: 7355
+2025-12-04 16:28:59,828 - WARNING - Missing image: 46072
+2025-12-04 16:28:59,828 - WARNING - Missing image: 43500
+2025-12-04 16:28:59,828 - WARNING - Missing image: 55465
+2025-12-04 16:28:59,828 - WARNING - Missing image: 40385
+2025-12-04 16:28:59,828 - WARNING - Missing image: 5402
+2025-12-04 16:28:59,828 - WARNING - Missing image: 44725
+2025-12-04 16:28:59,828 - WARNING - Missing image: 43958
+2025-12-04 16:28:59,828 - WARNING - Missing image: 7731
+2025-12-04 16:28:59,829 - WARNING - Missing image: 50573
+2025-12-04 16:28:59,829 - WARNING - Missing image: 8779
+2025-12-04 16:28:59,829 - WARNING - Missing image: 55001
+2025-12-04 16:28:59,829 - WARNING - Missing image: 43164
+2025-12-04 16:28:59,829 - WARNING - Missing image: 39729
+2025-12-04 16:28:59,829 - WARNING - Missing image: 56684
+2025-12-04 16:28:59,829 - WARNING - Missing image: 4988
+2025-12-04 16:28:59,829 - WARNING - Missing image: 57756
+2025-12-04 16:28:59,829 - WARNING - Missing image: 44341
+2025-12-04 16:28:59,830 - WARNING - Missing image: 52224
+2025-12-04 16:28:59,830 - WARNING - Missing image: 45293
+2025-12-04 16:29:00,927 - WARNING - Missing image: 5254
+2025-12-04 16:29:00,927 - WARNING - Missing image: 4386
+2025-12-04 16:29:00,928 - WARNING - Missing image: 44173
+2025-12-04 16:29:00,928 - WARNING - Missing image: 36761
+2025-12-04 16:29:00,928 - WARNING - Missing image: 51693
+2025-12-04 16:29:00,928 - WARNING - Missing image: 41401
+2025-12-04 16:29:00,929 - WARNING - Missing image: 7503
+2025-12-04 16:29:00,929 - WARNING - Missing image: 37481
+2025-12-04 16:29:00,929 - WARNING - Missing image: 46624
+2025-12-04 16:29:00,929 - WARNING - Missing image: 50741
+2025-12-04 16:29:00,929 - WARNING - Missing image: 55233
+2025-12-04 16:29:00,929 - WARNING - Missing image: 46278
+2025-12-04 16:29:00,929 - WARNING - Missing image: 43356
+2025-12-04 16:29:00,929 - WARNING - Missing image: 49230
+2025-12-04 16:29:00,930 - WARNING - Missing image: 7963
+2025-12-04 16:29:00,930 - WARNING - Missing image: 39147
+2025-12-04 16:29:00,930 - WARNING - Missing image: 36933
+2025-12-04 16:29:00,930 - WARNING - Missing image: 57138
+2025-12-04 16:29:00,930 - WARNING - Missing image: 41861
+2025-12-04 16:29:00,930 - WARNING - Missing image: 5608
+2025-12-04 16:29:00,930 - WARNING - Missing image: 58170
+2025-12-04 16:29:00,930 - WARNING - Missing image: 53598
+2025-12-04 16:29:00,931 - WARNING - Missing image: 39375
+2025-12-04 16:29:00,931 - WARNING - Missing image: 59290
+2025-12-04 16:29:00,931 - WARNING - Missing image: 52678
+2025-12-04 16:29:00,931 - WARNING - Missing image: 47198
+2025-12-04 16:29:00,931 - WARNING - Missing image: 43538
+2025-12-04 16:29:00,931 - WARNING - Missing image: 8325
+2025-12-04 16:29:00,931 - WARNING - Missing image: 46876
+2025-12-04 16:29:00,931 - WARNING - Missing image: 5862
+2025-12-04 16:29:00,932 - WARNING - Missing image: 39711
+2025-12-04 16:29:00,932 - WARNING - Missing image: 8117
+2025-12-04 16:29:01,902 - WARNING - Missing image: 44379
+2025-12-04 16:29:01,903 - WARNING - Missing image: 58726
+2025-12-04 16:29:01,903 - WARNING - Missing image: 36759
+2025-12-04 16:29:01,903 - WARNING - Missing image: 43960
+2025-12-04 16:29:01,903 - WARNING - Missing image: 51499
+2025-12-04 16:29:01,903 - WARNING - Missing image: 7709
+2025-12-04 16:29:01,904 - WARNING - Missing image: 8741
+2025-12-04 16:29:01,904 - WARNING - Missing image: 55805
+2025-12-04 16:29:01,904 - WARNING - Missing image: 55039
+2025-12-04 16:29:01,904 - WARNING - Missing image: 34832
+2025-12-04 16:29:01,904 - WARNING - Missing image: 48786
+2025-12-04 16:29:01,904 - WARNING - Missing image: 49654
+2025-12-04 16:29:01,905 - WARNING - Missing image: 39523
+2025-12-04 16:29:01,905 - WARNING - Missing image: 44977
+2025-12-04 16:29:01,905 - WARNING - Missing image: 41439
+2025-12-04 16:29:01,905 - WARNING - Missing image: 52812
+2025-12-04 16:29:01,905 - WARNING - Missing image: 58514
+2025-12-04 16:29:01,905 - WARNING - Missing image: 38637
+2025-12-04 16:29:01,906 - WARNING - Missing image: 5896
+2025-12-04 16:29:01,906 - WARNING - Missing image: 59600
+2025-12-04 16:29:01,906 - WARNING - Missing image: 4944
+2025-12-04 16:29:01,906 - WARNING - Missing image: 35128
+2025-12-04 16:29:01,906 - WARNING - Missing image: 42846
+2025-12-04 16:29:01,907 - WARNING - Missing image: 47508
+2025-12-04 16:29:01,907 - WARNING - Missing image: 54923
+2025-12-04 16:29:01,907 - WARNING - Missing image: 43994
+2025-12-04 16:29:01,907 - WARNING - Missing image: 49492
+2025-12-04 16:29:01,907 - WARNING - Missing image: 3953
+2025-12-04 16:29:01,908 - WARNING - Missing image: 9667
+2025-12-04 16:29:01,908 - WARNING - Missing image: 8587
+2025-12-04 16:29:01,908 - WARNING - Missing image: 42248
+2025-12-04 16:29:01,908 - WARNING - Missing image: 48772
+2025-12-04 16:29:02,973 - WARNING - Missing image: 53934
+2025-12-04 16:29:02,973 - WARNING - Missing image: 44983
+2025-12-04 16:29:02,974 - WARNING - Missing image: 53108
+2025-12-04 16:29:02,974 - WARNING - Missing image: 6079
+2025-12-04 16:29:02,974 - WARNING - Missing image: 9455
+2025-12-04 16:29:02,975 - WARNING - Missing image: 38405
+2025-12-04 16:29:02,975 - WARNING - Missing image: 9031
+2025-12-04 16:29:02,975 - WARNING - Missing image: 6845
+2025-12-04 16:29:02,975 - WARNING - Missing image: 45409
+2025-12-04 16:29:02,975 - WARNING - Missing image: 56822
+2025-12-04 16:29:02,975 - WARNING - Missing image: 39381
+2025-12-04 16:29:02,975 - WARNING - Missing image: 59056
+2025-12-04 16:29:02,975 - WARNING - Missing image: 40947
+2025-12-04 16:29:02,976 - WARNING - Missing image: 58184
+2025-12-04 16:29:02,976 - WARNING - Missing image: 51009
+2025-12-04 16:29:02,976 - WARNING - Missing image: 59264
+2025-12-04 16:29:02,976 - WARNING - Missing image: 48124
+2025-12-04 16:29:02,976 - WARNING - Missing image: 7399
+2025-12-04 16:29:02,976 - WARNING - Missing image: 9203
+2025-12-04 16:29:02,976 - WARNING - Missing image: 51835
+2025-12-04 16:29:02,976 - WARNING - Missing image: 3739
+2025-12-04 16:29:02,977 - WARNING - Missing image: 59432
+2025-12-04 16:29:02,977 - WARNING - Missing image: 44948
+2025-12-04 16:29:02,977 - WARNING - Missing image: 57563
+2025-12-04 16:29:02,977 - WARNING - Missing image: 41406
+2025-12-04 16:29:02,977 - WARNING - Missing image: 44174
+2025-12-04 16:29:02,977 - WARNING - Missing image: 5253
+2025-12-04 16:29:02,977 - WARNING - Missing image: 4381
+2025-12-04 16:29:02,978 - WARNING - Missing image: 46623
+2025-12-04 16:29:02,978 - WARNING - Missing image: 7504
+2025-12-04 16:29:02,978 - WARNING - Missing image: 3998
+2025-12-04 16:29:02,978 - WARNING - Missing image: 51694
+2025-12-04 16:29:04,615 - WARNING - Missing image: 55234
+2025-12-04 16:29:04,615 - WARNING - Missing image: 50746
+2025-12-04 16:29:04,615 - WARNING - Missing image: 46411
+2025-12-04 16:29:04,615 - WARNING - Missing image: 7736
+2025-12-04 16:29:04,615 - WARNING - Missing image: 58719
+2025-12-04 16:29:04,615 - WARNING - Missing image: 50574
+2025-12-04 16:29:04,616 - WARNING - Missing image: 43163
+2025-12-04 16:29:04,616 - WARNING - Missing image: 55006
+2025-12-04 16:29:04,616 - WARNING - Missing image: 36766
+2025-12-04 16:29:04,616 - WARNING - Missing image: 52223
+2025-12-04 16:29:04,617 - WARNING - Missing image: 45294
+2025-12-04 16:29:04,617 - WARNING - Missing image: 6280
+2025-12-04 16:29:04,617 - WARNING - Missing image: 35587
+2025-12-04 16:29:04,617 - WARNING - Missing image: 46075
+2025-12-04 16:29:04,617 - WARNING - Missing image: 34455
+2025-12-04 16:29:04,617 - WARNING - Missing image: 7352
+2025-12-04 16:29:04,617 - WARNING - Missing image: 43507
+2025-12-04 16:29:04,617 - WARNING - Missing image: 55462
+2025-12-04 16:29:04,618 - WARNING - Missing image: 40382
+2025-12-04 16:29:04,618 - WARNING - Missing image: 41250
+2025-12-04 16:29:04,618 - WARNING - Missing image: 38298
+2025-12-04 16:29:04,618 - WARNING - Missing image: 57335
+2025-12-04 16:29:04,618 - WARNING - Missing image: 53795
+2025-12-04 16:29:04,618 - WARNING - Missing image: 44722
+2025-12-04 16:29:04,618 - WARNING - Missing image: 39178
+2025-12-04 16:29:04,618 - WARNING - Missing image: 5405
+2025-12-04 16:29:04,619 - WARNING - Missing image: 57107
+2025-12-04 16:29:04,619 - WARNING - Missing image: 58973
+2025-12-04 16:29:04,619 - WARNING - Missing image: 52475
+2025-12-04 16:29:04,619 - WARNING - Missing image: 39944
+2025-12-04 16:29:04,619 - WARNING - Missing image: 52647
+2025-12-04 16:29:04,619 - WARNING - Missing image: 36130
+2025-12-04 16:29:06,133 - WARNING - Missing image: 44510
+2025-12-04 16:29:06,134 - WARNING - Missing image: 7160
+2025-12-04 16:29:06,134 - WARNING - Missing image: 55650
+2025-12-04 16:29:06,134 - WARNING - Missing image: 50322
+2025-12-04 16:29:06,134 - WARNING - Missing image: 47395
+2025-12-04 16:29:06,135 - WARNING - Missing image: 8914
+2025-12-04 16:29:06,135 - WARNING - Missing image: 43735
+2025-12-04 16:29:06,135 - WARNING - Missing image: 46247
+2025-12-04 16:29:06,135 - WARNING - Missing image: 6274
+2025-12-04 16:29:06,135 - WARNING - Missing image: 48927
+2025-12-04 16:29:06,136 - WARNING - Missing image: 35573
+2025-12-04 16:29:06,136 - WARNING - Missing image: 54544
+2025-12-04 16:29:06,136 - WARNING - Missing image: 51036
+2025-12-04 16:29:06,136 - WARNING - Missing image: 46081
+2025-12-04 16:29:06,137 - WARNING - Missing image: 47153
+2025-12-04 16:29:06,137 - WARNING - Missing image: 3706
+2025-12-04 16:29:06,138 - WARNING - Missing image: 56213
+2025-12-04 16:29:06,138 - WARNING - Missing image: 55496
+2025-12-04 16:29:06,138 - WARNING - Missing image: 40376
+2025-12-04 16:29:06,139 - WARNING - Missing image: 4523
+2025-12-04 16:29:06,139 - WARNING - Missing image: 37224
+2025-12-04 16:29:06,139 - WARNING - Missing image: 53761
+2025-12-04 16:29:06,139 - WARNING - Missing image: 45604
+2025-12-04 16:29:06,139 - WARNING - Missing image: 56021
+2025-12-04 16:29:06,140 - WARNING - Missing image: 40144
+2025-12-04 16:29:06,140 - WARNING - Missing image: 58987
+2025-12-04 16:29:06,140 - WARNING - Missing image: 59069
+2025-12-04 16:29:06,140 - WARNING - Missing image: 4711
+2025-12-04 16:29:06,140 - WARNING - Missing image: 40978
+2025-12-04 16:29:06,141 - WARNING - Missing image: 9832
+2025-12-04 16:29:06,141 - WARNING - Missing image: 6046
+2025-12-04 16:29:06,141 - WARNING - Missing image: 52481
+2025-12-04 16:29:07,045 - WARNING - Missing image: 34693
+2025-12-04 16:29:07,046 - WARNING - Missing image: 47361
+2025-12-04 16:29:07,046 - WARNING - Missing image: 48329
+2025-12-04 16:29:07,046 - WARNING - Missing image: 3534
+2025-12-04 16:29:07,046 - WARNING - Missing image: 57597
+2025-12-04 16:29:07,047 - WARNING - Missing image: 42613
+2025-12-04 16:29:07,047 - WARNING - Missing image: 51204
+2025-12-04 16:29:07,047 - WARNING - Missing image: 7194
+2025-12-04 16:29:07,047 - WARNING - Missing image: 40520
+2025-12-04 16:29:07,047 - WARNING - Missing image: 37472
+2025-12-04 16:29:07,047 - WARNING - Missing image: 4375
+2025-12-04 16:29:07,047 - WARNING - Missing image: 44180
+2025-12-04 16:29:07,048 - WARNING - Missing image: 53137
+2025-12-04 16:29:07,048 - WARNING - Missing image: 35325
+2025-12-04 16:29:07,048 - WARNING - Missing image: 51660
+2025-12-04 16:29:07,048 - WARNING - Missing image: 6422
+2025-12-04 16:29:07,048 - WARNING - Missing image: 42879
+2025-12-04 16:29:07,048 - WARNING - Missing image: 54120
+2025-12-04 16:29:07,048 - WARNING - Missing image: 6610
+2025-12-04 16:29:07,048 - WARNING - Missing image: 47537
+2025-12-04 16:29:07,048 - WARNING - Missing image: 42045
+2025-12-04 16:29:07,049 - WARNING - Missing image: 51452
+2025-12-04 16:29:07,049 - WARNING - Missing image: 9658
+2025-12-04 16:29:07,049 - WARNING - Missing image: 43197
+2025-12-04 16:29:07,049 - WARNING - Missing image: 5095
+2025-12-04 16:29:07,049 - WARNING - Missing image: 4147
+2025-12-04 16:29:07,049 - WARNING - Missing image: 38608
+2025-12-04 16:29:07,050 - WARNING - Missing image: 56677
+2025-12-04 16:29:07,050 - WARNING - Missing image: 37640
+2025-12-04 16:29:07,050 - WARNING - Missing image: 36792
+2025-12-04 16:29:07,050 - WARNING - Missing image: 45260
+2025-12-04 16:29:07,050 - WARNING - Missing image: 43956
+2025-12-04 16:29:08,124 - WARNING - Missing image: 46418
+2025-12-04 16:29:08,125 - WARNING - Missing image: 55833
+2025-12-04 16:29:08,125 - WARNING - Missing image: 42884
+2025-12-04 16:29:08,125 - WARNING - Missing image: 8777
+2025-12-04 16:29:08,125 - WARNING - Missing image: 48582
+2025-12-04 16:29:08,126 - WARNING - Missing image: 4986
+2025-12-04 16:29:08,126 - WARNING - Missing image: 39727
+2025-12-04 16:29:08,126 - WARNING - Missing image: 57758
+2025-12-04 16:29:08,126 - WARNING - Missing image: 5854
+2025-12-04 16:29:08,127 - WARNING - Missing image: 3991
+2025-12-04 16:29:08,127 - WARNING - Missing image: 45893
+2025-12-04 16:29:08,127 - WARNING - Missing image: 5068
+2025-12-04 16:29:08,127 - WARNING - Missing image: 58522
+2025-12-04 16:29:08,128 - WARNING - Missing image: 39515
+2025-12-04 16:29:08,128 - WARNING - Missing image: 44941
+2025-12-04 16:29:08,128 - WARNING - Missing image: 9497
+2025-12-04 16:29:08,128 - WARNING - Missing image: 49662
+2025-12-04 16:29:08,129 - WARNING - Missing image: 39171
+2025-12-04 16:29:08,129 - WARNING - Missing image: 57932
+2025-12-04 16:29:08,129 - WARNING - Missing image: 36905
+2025-12-04 16:29:08,129 - WARNING - Missing image: 40985
+2025-12-04 16:29:08,129 - WARNING - Missing image: 58146
+2025-12-04 16:29:08,130 - WARNING - Missing image: 59094
+2025-12-04 16:29:08,130 - WARNING - Missing image: 41857
+2025-12-04 16:29:08,130 - WARNING - Missing image: 36139
+2025-12-04 16:29:08,130 - WARNING - Missing image: 7169
+2025-12-04 16:29:08,130 - WARNING - Missing image: 7955
+2025-12-04 16:29:08,131 - WARNING - Missing image: 6887
+2025-12-04 16:29:08,131 - WARNING - Missing image: 8121
+2025-12-04 16:29:08,131 - WARNING - Missing image: 49808
+2025-12-04 16:29:08,131 - WARNING - Missing image: 6289
+2025-12-04 16:29:08,131 - WARNING - Missing image: 4388
+2025-12-04 16:29:09,704 - WARNING - Missing image: 47992
+2025-12-04 16:29:09,704 - WARNING - Missing image: 49034
+2025-12-04 16:29:09,705 - WARNING - Missing image: 8313
+2025-12-04 16:29:09,705 - WARNING - Missing image: 56028
+2025-12-04 16:29:09,705 - WARNING - Missing image: 38291
+2025-12-04 16:29:09,705 - WARNING - Missing image: 40971
+2025-12-04 16:29:09,705 - WARNING - Missing image: 39185
+2025-12-04 16:29:09,705 - WARNING - Missing image: 41259
+2025-12-04 16:29:09,705 - WARNING - Missing image: 52488
+2025-12-04 16:29:09,705 - WARNING - Missing image: 59060
+2025-12-04 16:29:09,706 - WARNING - Missing image: 56814
+2025-12-04 16:29:09,706 - WARNING - Missing image: 47368
+2025-12-04 16:29:09,706 - WARNING - Missing image: 6873
+2025-12-04 16:29:09,706 - WARNING - Missing image: 42428
+2025-12-04 16:29:09,706 - WARNING - Missing image: 48112
+2025-12-04 16:29:09,706 - WARNING - Missing image: 9235
+2025-12-04 16:29:09,706 - WARNING - Missing image: 53768
+2025-12-04 16:29:09,707 - WARNING - Missing image: 59252
+2025-12-04 16:29:09,707 - WARNING - Missing image: 48320
+2025-12-04 16:29:09,707 - WARNING - Missing image: 6619
+2025-12-04 16:29:09,707 - WARNING - Missing image: 50589
+2025-12-04 16:29:09,707 - WARNING - Missing image: 54915
+2025-12-04 16:29:09,707 - WARNING - Missing image: 42870
+2025-12-04 16:29:09,707 - WARNING - Missing image: 48576
+2025-12-04 16:29:09,708 - WARNING - Missing image: 9651
+2025-12-04 16:29:09,708 - WARNING - Missing image: 8783
+2025-12-04 16:29:09,708 - WARNING - Missing image: 4972
+2025-12-04 16:29:09,708 - WARNING - Missing image: 9007
+2025-12-04 16:29:09,708 - WARNING - Missing image: 4718
+2025-12-04 16:29:09,708 - WARNING - Missing image: 38601
+2025-12-04 16:29:09,708 - WARNING - Missing image: 45269
+2025-12-04 16:29:09,708 - WARNING - Missing image: 54129
+2025-12-04 16:29:11,444 - WARNING - Missing image: 53902
+2025-12-04 16:29:11,445 - WARNING - Missing image: 40529
+2025-12-04 16:29:11,446 - WARNING - Missing image: 51669
+2025-12-04 16:29:11,446 - WARNING - Missing image: 3965
+2025-12-04 16:29:11,446 - WARNING - Missing image: 38433
+2025-12-04 16:29:11,446 - WARNING - Missing image: 59404
+2025-12-04 16:29:11,447 - WARNING - Missing image: 44189
+2025-12-04 16:29:11,448 - WARNING - Missing image: 59636
+2025-12-04 16:29:11,448 - WARNING - Missing image: 48744
+2025-12-04 16:29:11,448 - WARNING - Missing image: 49696
+2025-12-04 16:29:11,448 - WARNING - Missing image: 57303
+2025-12-04 16:29:11,449 - WARNING - Missing image: 9463
+2025-12-04 16:29:11,450 - WARNING - Missing image: 41266
+2025-12-04 16:29:11,450 - WARNING - Missing image: 5433
+2025-12-04 16:29:11,450 - WARNING - Missing image: 44714
+2025-12-04 16:29:11,450 - WARNING - Missing image: 59299
+2025-12-04 16:29:11,451 - WARNING - Missing image: 49837
+2025-12-04 16:29:11,451 - WARNING - Missing image: 34463
+2025-12-04 16:29:11,452 - WARNING - Missing image: 7364
+2025-12-04 16:29:11,452 - WARNING - Missing image: 55454
+2025-12-04 16:29:11,452 - WARNING - Missing image: 47191
+2025-12-04 16:29:11,453 - WARNING - Missing image: 54586
+2025-12-04 16:29:11,453 - WARNING - Missing image: 43531
+2025-12-04 16:29:11,454 - WARNING - Missing image: 46271
+2025-12-04 16:29:11,454 - WARNING - Missing image: 7156
+2025-12-04 16:29:11,454 - WARNING - Missing image: 35783
+2025-12-04 16:29:11,455 - WARNING - Missing image: 8922
+2025-12-04 16:29:11,455 - WARNING - Missing image: 50314
+2025-12-04 16:29:11,456 - WARNING - Missing image: 34651
+2025-12-04 16:29:11,456 - WARNING - Missing image: 6084
+2025-12-04 16:29:11,456 - WARNING - Missing image: 52671
+2025-12-04 16:29:11,457 - WARNING - Missing image: 49239
+2025-12-04 16:29:12,943 - WARNING - Missing image: 43703
+2025-12-04 16:29:12,943 - WARNING - Missing image: 40186
+2025-12-04 16:29:12,944 - WARNING - Missing image: 57131
+2025-12-04 16:29:12,944 - WARNING - Missing image: 5601
+2025-12-04 16:29:12,944 - WARNING - Missing image: 53591
+2025-12-04 16:29:12,944 - WARNING - Missing image: 58179
+2025-12-04 16:29:12,944 - WARNING - Missing image: 59897
+2025-12-04 16:29:12,944 - WARNING - Missing image: 39972
+2025-12-04 16:29:12,944 - WARNING - Missing image: 52443
+2025-12-04 16:29:12,945 - WARNING - Missing image: 7532
+2025-12-04 16:29:12,945 - WARNING - Missing image: 36106
+2025-12-04 16:29:12,945 - WARNING - Missing image: 46615
+2025-12-04 16:29:12,946 - WARNING - Missing image: 41868
+2025-12-04 16:29:12,946 - WARNING - Missing image: 43367
+2025-12-04 16:29:12,946 - WARNING - Missing image: 55202
+2025-12-04 16:29:12,946 - WARNING - Missing image: 57555
+2025-12-04 16:29:12,946 - WARNING - Missing image: 52027
+2025-12-04 16:29:12,946 - WARNING - Missing image: 36562
+2025-12-04 16:29:12,946 - WARNING - Missing image: 44142
+2025-12-04 16:29:12,946 - WARNING - Missing image: 5265
+2025-12-04 16:29:12,947 - WARNING - Missing image: 39718
+2025-12-04 16:29:12,947 - WARNING - Missing image: 36750
+2025-12-04 16:29:12,947 - WARNING - Missing image: 57767
+2025-12-04 16:29:12,947 - WARNING - Missing image: 37682
+2025-12-04 16:29:12,947 - WARNING - Missing image: 58945
+2025-12-04 16:29:12,947 - WARNING - Missing image: 50542
+2025-12-04 16:29:12,947 - WARNING - Missing image: 43969
+2025-12-04 16:29:12,948 - WARNING - Missing image: 46427
+2025-12-04 16:29:12,948 - WARNING - Missing image: 7700
+2025-12-04 16:29:12,948 - WARNING - Missing image: 43155
+2025-12-04 16:29:12,948 - WARNING - Missing image: 42087
+2025-12-04 16:29:12,948 - WARNING - Missing image: 41602
+2025-12-04 16:29:14,300 - WARNING - Missing image: 6414
+2025-12-04 16:29:14,300 - WARNING - Missing image: 50784
+2025-12-04 16:29:14,300 - WARNING - Missing image: 55030
+2025-12-04 16:29:14,300 - WARNING - Missing image: 8748
+2025-12-04 16:29:14,300 - WARNING - Missing image: 43393
+2025-12-04 16:29:14,301 - WARNING - Missing image: 35313
+2025-12-04 16:29:14,301 - WARNING - Missing image: 51656
+2025-12-04 16:29:14,301 - WARNING - Missing image: 42241
+2025-12-04 16:29:14,301 - WARNING - Missing image: 56473
+2025-12-04 16:29:14,301 - WARNING - Missing image: 40516
+2025-12-04 16:29:14,302 - WARNING - Missing image: 4343
+2025-12-04 16:29:14,302 - WARNING - Missing image: 53101
+2025-12-04 16:29:14,302 - WARNING - Missing image: 5291
+2025-12-04 16:29:14,302 - WARNING - Missing image: 45256
+2025-12-04 16:29:14,302 - WARNING - Missing image: 57793
+2025-12-04 16:29:14,303 - WARNING - Missing image: 4171
+2025-12-04 16:29:14,303 - WARNING - Missing image: 59609
+2025-12-04 16:29:14,303 - WARNING - Missing image: 47501
+2025-12-04 16:29:14,303 - WARNING - Missing image: 37676
+2025-12-04 16:29:14,303 - WARNING - Missing image: 44384
+2025-12-04 16:29:14,304 - WARNING - Missing image: 54116
+2025-12-04 16:29:14,304 - WARNING - Missing image: 48549
+2025-12-04 16:29:14,304 - WARNING - Missing image: 42073
+2025-12-04 16:29:14,304 - WARNING - Missing image: 56225
+2025-12-04 16:29:14,304 - WARNING - Missing image: 53757
+2025-12-04 16:29:14,304 - WARNING - Missing image: 39388
+2025-12-04 16:29:14,305 - WARNING - Missing image: 37212
+2025-12-04 16:29:14,305 - WARNING - Missing image: 4515
+2025-12-04 16:29:14,305 - WARNING - Missing image: 45632
+2025-12-04 16:29:14,305 - WARNING - Missing image: 51000
+2025-12-04 16:29:14,305 - WARNING - Missing image: 6626
+2025-12-04 16:29:14,305 - WARNING - Missing image: 51464
+2025-12-04 16:29:15,417 - WARNING - Missing image: 6242
+2025-12-04 16:29:15,417 - WARNING - Missing image: 47165
+2025-12-04 16:29:15,418 - WARNING - Missing image: 35545
+2025-12-04 16:29:15,418 - WARNING - Missing image: 3730
+2025-12-04 16:29:15,419 - WARNING - Missing image: 42417
+2025-12-04 16:29:15,419 - WARNING - Missing image: 48911
+2025-12-04 16:29:15,419 - WARNING - Missing image: 35777
+2025-12-04 16:29:15,419 - WARNING - Missing image: 46285
+2025-12-04 16:29:15,420 - WARNING - Missing image: 9804
+2025-12-04 16:29:15,420 - WARNING - Missing image: 51232
+2025-12-04 16:29:15,420 - WARNING - Missing image: 6070
+2025-12-04 16:29:15,420 - WARNING - Missing image: 47357
+2025-12-04 16:29:15,420 - WARNING - Missing image: 42625
+2025-12-04 16:29:15,421 - WARNING - Missing image: 3502
+2025-12-04 16:29:15,421 - WARNING - Missing image: 54740
+2025-12-04 16:29:15,421 - WARNING - Missing image: 9038
+2025-12-04 16:29:15,421 - WARNING - Missing image: 59863
+2025-12-04 16:29:15,422 - WARNING - Missing image: 40172
+2025-12-04 16:29:15,422 - WARNING - Missing image: 56017
+2025-12-04 16:29:15,422 - WARNING - Missing image: 53565
+2025-12-04 16:29:15,422 - WARNING - Missing image: 39986
+2025-12-04 16:29:15,422 - WARNING - Missing image: 54572
+2025-12-04 16:29:15,423 - WARNING - Missing image: 7390
+2025-12-04 16:29:15,423 - WARNING - Missing image: 38434
+2025-12-04 16:29:15,423 - WARNING - Missing image: 45400
+2025-12-04 16:29:15,424 - WARNING - Missing image: 4727
+2025-12-04 16:29:15,424 - WARNING - Missing image: 53905
+2025-12-04 16:29:15,424 - WARNING - Missing image: 57599
+2025-12-04 16:29:15,424 - WARNING - Missing image: 59403
+2025-12-04 16:29:15,424 - WARNING - Missing image: 53139
+2025-12-04 16:29:15,425 - WARNING - Missing image: 3962
+2025-12-04 16:29:15,425 - WARNING - Missing image: 9464
+2025-12-04 16:29:17,192 - WARNING - Missing image: 42877
+2025-12-04 16:29:17,192 - WARNING - Missing image: 47539
+2025-12-04 16:29:17,192 - WARNING - Missing image: 35925
+2025-12-04 16:29:17,192 - WARNING - Missing image: 9656
+2025-12-04 16:29:17,192 - WARNING - Missing image: 48743
+2025-12-04 16:29:17,193 - WARNING - Missing image: 43199
+2025-12-04 16:29:17,193 - WARNING - Missing image: 8784
+2025-12-04 16:29:17,193 - WARNING - Missing image: 4975
+2025-12-04 16:29:17,193 - WARNING - Missing image: 59631
+2025-12-04 16:29:17,194 - WARNING - Missing image: 48929
+2025-12-04 16:29:17,194 - WARNING - Missing image: 38606
+2025-12-04 16:29:17,194 - WARNING - Missing image: 51038
+2025-12-04 16:29:17,194 - WARNING - Missing image: 55498
+2025-12-04 16:29:17,194 - WARNING - Missing image: 3708
+2025-12-04 16:29:17,195 - WARNING - Missing image: 47961
+2025-12-04 16:29:17,195 - WARNING - Missing image: 38050
+2025-12-04 16:29:17,195 - WARNING - Missing image: 59255
+2025-12-04 16:29:17,195 - WARNING - Missing image: 58989
+2025-12-04 16:29:17,196 - WARNING - Missing image: 39182
+2025-12-04 16:29:17,196 - WARNING - Missing image: 41098
+2025-12-04 16:29:17,196 - WARNING - Missing image: 56813
+2025-12-04 16:29:17,196 - WARNING - Missing image: 48115
+2025-12-04 16:29:17,196 - WARNING - Missing image: 59067
+2025-12-04 16:29:17,196 - WARNING - Missing image: 6048
+2025-12-04 16:29:17,196 - WARNING - Missing image: 6874
+2025-12-04 16:29:17,196 - WARNING - Missing image: 4149
+2025-12-04 16:29:17,197 - WARNING - Missing image: 56679
+2025-12-04 16:29:17,197 - WARNING - Missing image: 35589
+2025-12-04 16:29:17,197 - WARNING - Missing image: 49033
+2025-12-04 16:29:17,197 - WARNING - Missing image: 8314
+2025-12-04 16:29:17,197 - WARNING - Missing image: 9000
+2025-12-04 16:29:17,197 - WARNING - Missing image: 48327
+2025-12-04 16:29:18,086 - WARNING - Missing image: 52649
+2025-12-04 16:29:18,086 - WARNING - Missing image: 43509
+2025-12-04 16:29:18,087 - WARNING - Missing image: 47995
+2025-12-04 16:29:18,087 - WARNING - Missing image: 36902
+2025-12-04 16:29:18,087 - WARNING - Missing image: 57109
+2025-12-04 16:29:18,087 - WARNING - Missing image: 39344
+2025-12-04 16:29:18,088 - WARNING - Missing image: 38296
+2025-12-04 16:29:18,088 - WARNING - Missing image: 39176
+2025-12-04 16:29:18,088 - WARNING - Missing image: 40982
+2025-12-04 16:29:18,088 - WARNING - Missing image: 57935
+2025-12-04 16:29:18,088 - WARNING - Missing image: 59093
+2025-12-04 16:29:18,088 - WARNING - Missing image: 41850
+2025-12-04 16:29:18,088 - WARNING - Missing image: 46249
+2025-12-04 16:29:18,089 - WARNING - Missing image: 58141
+2025-12-04 16:29:18,089 - WARNING - Missing image: 8126
+2025-12-04 16:29:18,089 - WARNING - Missing image: 7952
+2025-12-04 16:29:18,089 - WARNING - Missing image: 45894
+2025-12-04 16:29:18,089 - WARNING - Missing image: 6880
+2025-12-04 16:29:18,089 - WARNING - Missing image: 39512
+2025-12-04 16:29:18,089 - WARNING - Missing image: 41408
+2025-12-04 16:29:18,090 - WARNING - Missing image: 52823
+2025-12-04 16:29:18,090 - WARNING - Missing image: 58525
+2025-12-04 16:29:18,090 - WARNING - Missing image: 37488
+2025-12-04 16:29:18,090 - WARNING - Missing image: 50748
+2025-12-04 16:29:18,090 - WARNING - Missing image: 9490
+2025-12-04 16:29:18,091 - WARNING - Missing image: 3996
+2025-12-04 16:29:18,091 - WARNING - Missing image: 49665
+2025-12-04 16:29:18,091 - WARNING - Missing image: 8542
+2025-12-04 16:29:18,091 - WARNING - Missing image: 55834
+2025-12-04 16:29:18,091 - WARNING - Missing image: 43951
+2025-12-04 16:29:18,092 - WARNING - Missing image: 42883
+2025-12-04 16:29:18,092 - WARNING - Missing image: 48585
+2025-12-04 16:29:19,859 - WARNING - Missing image: 39720
+2025-12-04 16:29:19,859 - WARNING - Missing image: 5853
+2025-12-04 16:29:19,859 - WARNING - Missing image: 47350
+2025-12-04 16:29:19,860 - WARNING - Missing image: 55008
+2025-12-04 16:29:19,860 - WARNING - Missing image: 46282
+2025-12-04 16:29:19,860 - WARNING - Missing image: 34803
+2025-12-04 16:29:19,860 - WARNING - Missing image: 44348
+2025-12-04 16:29:19,860 - WARNING - Missing image: 9803
+2025-12-04 16:29:19,860 - WARNING - Missing image: 42622
+2025-12-04 16:29:19,861 - WARNING - Missing image: 3505
+2025-12-04 16:29:19,861 - WARNING - Missing image: 40175
+2025-12-04 16:29:19,861 - WARNING - Missing image: 53562
+2025-12-04 16:29:19,861 - WARNING - Missing image: 48318
+2025-12-04 16:29:19,861 - WARNING - Missing image: 56010
+2025-12-04 16:29:19,861 - WARNING - Missing image: 45407
+2025-12-04 16:29:19,862 - WARNING - Missing image: 40949
+2025-12-04 16:29:19,862 - WARNING - Missing image: 4720
+2025-12-04 16:29:19,862 - WARNING - Missing image: 39981
+2025-12-04 16:29:19,862 - WARNING - Missing image: 59058
+2025-12-04 16:29:19,862 - WARNING - Missing image: 56222
+2025-12-04 16:29:19,863 - WARNING - Missing image: 37215
+2025-12-04 16:29:19,863 - WARNING - Missing image: 53750
+2025-12-04 16:29:19,863 - WARNING - Missing image: 45635
+2025-12-04 16:29:19,863 - WARNING - Missing image: 35542
+2025-12-04 16:29:19,863 - WARNING - Missing image: 51007
+2025-12-04 16:29:19,863 - WARNING - Missing image: 36768
+2025-12-04 16:29:19,864 - WARNING - Missing image: 48916
+2025-12-04 16:29:19,864 - WARNING - Missing image: 47162
+2025-12-04 16:29:19,864 - WARNING - Missing image: 4512
+2025-12-04 16:29:19,864 - WARNING - Missing image: 52682
+2025-12-04 16:29:19,864 - WARNING - Missing image: 7397
+2025-12-04 16:29:19,865 - WARNING - Missing image: 6245
+2025-12-04 16:29:41,928 - WARNING - Missing image: 57794
+2025-12-04 16:29:41,929 - WARNING - Missing image: 56646
+2025-12-04 16:29:41,929 - WARNING - Missing image: 42410
+2025-12-04 16:29:41,929 - WARNING - Missing image: 3737
+2025-12-04 16:29:41,929 - WARNING - Missing image: 54575
+2025-12-04 16:29:41,929 - WARNING - Missing image: 5898
+2025-12-04 16:29:41,929 - WARNING - Missing image: 38639
+2025-12-04 16:29:41,929 - WARNING - Missing image: 45251
+2025-12-04 16:29:41,929 - WARNING - Missing image: 37671
+2025-12-04 16:29:41,930 - WARNING - Missing image: 44383
+2025-12-04 16:29:41,930 - WARNING - Missing image: 47506
+2025-12-04 16:29:41,930 - WARNING - Missing image: 51463
+2025-12-04 16:29:41,930 - WARNING - Missing image: 6621
+2025-12-04 16:29:41,930 - WARNING - Missing image: 42848
+2025-12-04 16:29:41,930 - WARNING - Missing image: 9669
+2025-12-04 16:29:41,930 - WARNING - Missing image: 42074
+2025-12-04 16:29:41,930 - WARNING - Missing image: 47734
+2025-12-04 16:29:41,931 - WARNING - Missing image: 6413
+2025-12-04 16:29:41,931 - WARNING - Missing image: 50783
+2025-12-04 16:29:41,931 - WARNING - Missing image: 51651
+2025-12-04 16:29:41,932 - WARNING - Missing image: 35314
+2025-12-04 16:29:41,932 - WARNING - Missing image: 43394
+2025-12-04 16:29:41,932 - WARNING - Missing image: 8589
+2025-12-04 16:29:41,932 - WARNING - Missing image: 54111
+2025-12-04 16:29:41,932 - WARNING - Missing image: 56474
+2025-12-04 16:30:34,276 - WARNING - Missing image: 53106
+2025-12-04 16:30:34,278 - WARNING - Missing image: 5296
+2025-12-04 16:30:34,278 - WARNING - Missing image: 40511
+2025-12-04 16:30:34,278 - WARNING - Missing image: 41605
+2025-12-04 16:30:34,278 - WARNING - Missing image: 4344
+2025-12-04 16:30:35,025 - WARNING - Missing image: 57760
+2025-12-04 16:30:36,044 - WARNING - Missing image: 36757
+2025-12-04 16:30:36,044 - WARNING - Missing image: 37685
+2025-12-04 16:30:36,045 - WARNING - Missing image: 5050
+2025-12-04 16:30:36,045 - WARNING - Missing image: 44377
+2025-12-04 16:30:36,045 - WARNING - Missing image: 58728
+2025-12-04 16:30:36,425 - WARNING - Missing image: 50545
+2025-12-04 16:30:37,077 - WARNING - Missing image: 7707
+2025-12-04 16:30:37,077 - WARNING - Missing image: 46420
+2025-12-04 16:30:37,077 - WARNING - Missing image: 51497
+2025-12-04 16:30:37,420 - WARNING - Missing image: 43152

@@ -1,0 +1,21 @@
+graph TD
+    User[User] -->|Query: 'Trendy Summer Outfits'| API[FastAPI /chat]
+    
+    subgraph "Style Sync System"
+        API -->|1. Logic Router| Filter[Filter Logic]
+        Filter -->|Apply Filters| Chroma[ChromaDB]
+        API -->|2. Embed Query| OpenCLIP[OpenCLIP Model]
+        OpenCLIP -->|Vector| Chroma
+        
+        Chroma -->|3. Retrieve Top K| Metadata[Metadata + S3 URIs]
+        
+        Metadata -->|4. Fetch Images| S3Bridge[S3-Gemini Bridge]
+        S3Bridge -->|Get Object| S3[AWS S3 Bucket]
+        S3 -->|Image Bytes| S3Bridge
+        S3Bridge -->|Base64 Encode| API
+        
+        API -->|5. Prompt + Base64 Images| Gemini[Gemini 1.5 Pro]
+        Gemini -->|Natural Language Response| API
+    end
+    
+    API -->|Response + S3 URLs| User
