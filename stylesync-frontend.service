@@ -1,0 +1,15 @@
+[Unit]
+Description=StyleSync Frontend
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/StyleSync/src/frontend
+ExecStart=/usr/bin/npm start
+Restart=always
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=BACKEND_URL=http://localhost:8000
+
+[Install]
+WantedBy=multi-user.target
