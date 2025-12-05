@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hammad/StyleSync/mlruns/738033750784482509/0b78957ca48540a6b3c4cfb87baa939d/artifacts
+end_time: 1764864710870
+entry_point_name: ''
+experiment_id: '738033750784482509'
+lifecycle_stage: active
+run_id: 0b78957ca48540a6b3c4cfb87baa939d
+run_name: Zero-Shot
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764864524970
+status: 3
+tags: []
+user_id: hammad

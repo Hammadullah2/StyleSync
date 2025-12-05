@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hammad/StyleSync/mlruns/738033750784482509/4524ecb11b3f4995acdef22e5ffef176/artifacts
+end_time: 1764864823728
+entry_point_name: ''
+experiment_id: '738033750784482509'
+lifecycle_stage: active
+run_id: 4524ecb11b3f4995acdef22e5ffef176
+run_name: Few-Shot (k=3)
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764864710889
+status: 3
+tags: []
+user_id: hammad

@@ -1,332 +1,392 @@
-# StyleSync – A Multi-Modal Fashion Recommendation System
+# StyleSync - AI-Powered Fashion Recommendation System
 
-A production-ready MLOps system to classify fashion attributes and power a multi-modal style advisor.
+## 🎯 Project Overview
+
+StyleSync is a production-grade **Retrieval-Augmented Generation (RAG)** system that provides personalized fashion recommendations using multimodal AI. The system combines **visual search** (CLIP embeddings), **vector retrieval** (ChromaDB), and **generative AI** (Google Gemini) to deliver contextual, fashion-forward advice.
+
+### LLMOps Objectives
+
+This project demonstrates a complete **LLMOps lifecycle**:
+
+1. **Data Ingestion & Vectorization**: Automated pipeline to ingest fashion images/metadata from S3 and create embeddings
+2. **Retrieval Logic**: Semantic search with metadata filtering (season, trends, color)
+3. **Generation with Guardrails**: Multi-modal LLM generation with input/output validation
+4. **Monitoring & Observability**: Prometheus metrics, Grafana dashboards, and LangSmith tracing
+5. **CI/CD**: Automated testing, linting, Docker builds, and canary deployments
+6. **Security**: Guardrails for prompt injection, PII detection, and content moderation
 
 ---
 
-## 🏛️ Architecture
+## 🏗️ System Architecture
 
-This diagram shows the complete MLOps workflow for **Milestone 1**, from data ingestion to a monitored inference API.
+### High-Level Architecture
 
 ```mermaid
-flowchart LR
-  subgraph Cloud
-    S3["S3 / MinIO\nImages + Metadata"]
-    EC2["EC2 / VM\nInference Host"]
-  end
-
-  S3 --> Ingest["Data ingestion\n(download, validate)"]
-  Ingest --> Preprocess["Preprocessing\n(resize, augment, split)"]
-  Preprocess --> Training["Training\n(transfer learning: ResNet50 / EfficientNet)"]
-  Training --> MLflow["MLflow\nTracking & Registry"]
-  MLflow --> Model["Model artifact\n(model_v1)"]
-  Model --> Build["Build Docker image"]
-  Build --> Inference["Inference API\n(FastAPI /predict)"]
-  Inference --> UI["Streamlit UI\n(Find Similar, Style Advisor)"]
-  Inference --> Prom["Prometheus + Grafana\nMonitoring"]
-  Inference --> Evidently["Evidently\nDrift dashboard"]
+graph TB
+    subgraph "Frontend"
+        UI[Next.js Chat Widget]
+    end
+    
+    subgraph "Backend API"
+        API[FastAPI /chat Endpoint]
+        Guard[Input Guardrails]
+        Router[Logic Router]
+        Retrieval[Vector Search]
+        Gen[Gemini Generation]
+        OutGuard[Output Guardrails]
+    end
+    
+    subgraph "Data Layer"
+        S3[(S3 Bucket<br/>Fashion Images)]
+        Chroma[(ChromaDB<br/>Vector Store)]
+    end
+    
+    subgraph "ML Models"
+        CLIP[OpenCLIP<br/>ViT-B-32]
+        Gemini[Google Gemini<br/>2.5-flash]
+    end
+    
+    subgraph "Observability"
+        Prom[Prometheus<br/>Metrics]
+        Graf[Grafana<br/>Dashboards]
+        LS[LangSmith<br/>Tracing]
+    end
+    
+    UI -->|POST /api/chat| API
+    API --> Guard
+    Guard --> Router
+    Router --> Retrieval
+    Retrieval --> Chroma
+    Retrieval --> S3
+    S3 --> Gen
+    Gen --> Gemini
+    Gen --> OutGuard
+    OutGuard --> API
+    API --> UI
+    
+    API -.-> Prom
+    Prom -.-> Graf
+    API -.-> LS
+    CLIP -.->|Embeddings| Chroma
 ```
----
-## Windows Users
-- Please install WSL2 (Ubuntu recommended).
-- Open your WSL terminal in the project folder.
-- Run `make dev`.
 
----
+### Data Flow Diagram
 
-## AWS Cloud Setup (Free-Tier Hybrid MLOps Workflow)
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant API
+    participant Guardrails
+    participant VectorDB
+    participant S3
+    participant LLM
+    participant Metrics
 
-This guide documents the AWS configuration used for the **StyleSync – MLOps Project**.
-It explains how we created our AWS account, IAM user, installed and configured the AWS CLI,
-and prepared an S3 bucket and EC2 instance for future data and model storage.
-
----
-
-### Step 1 — Create an AWS Account
-1. Visit [https://aws.amazon.com/](https://aws.amazon.com/) and sign up for a new account.
-2. Enable **Free Tier** usage during registration.
-3. Verify your phone number and add a debit/credit card (required for activation).
-4. After confirmation, log in to the **AWS Management Console**.
-
----
-
-###  Step 2 — Create an IAM User for CLI / Kaggle Access
-1. Open the **IAM Console** → [Users → Create user](https://console.aws.amazon.com/iam/home#/users).
-2. **User name:** `mlops-user`
-3. (Optional) Check **Provide user access to the AWS Management Console** if you also want password sign-in.
-4. Click **Next**.
-5. Under **Set permissions**, choose **Attach policies directly** and select:
-   -  `AmazonS3FullAccess`
-   - (Optional) `AmazonEC2FullAccess` for later EC2 use
-6. Click **Create user**.
-7. After creation:
-   - Open the new user → **Security credentials** tab.
-   - Scroll to **Access keys** → click **Create access key**.
-   - Choose **Use case: Command Line Interface (CLI)** → **Next** → **Create access key**.
-   - **Download the `.csv` file** containing:
-     ```
-     AWS_ACCESS_KEY_ID
-     AWS_SECRET_ACCESS_KEY
-     ```
-
-**Why:** this IAM user provides secure **programmatic access** for the AWS CLI, Kaggle notebooks, and GitHub Actions.
-
----
-
-### Step 3 — Install & Configure AWS CLI (on local machine)
-
-#### Install the AWS CLI
-- Download the 64-bit Windows installer:
-  [https://awscli.amazonaws.com/AWSCLIV2.msi](https://awscli.amazonaws.com/AWSCLIV2.msi)
-- Run the installer (keep defaults).
-- Open a **new PowerShell** window and verify:
-  ```bash
-  aws --version
-- You would see the following:
-  ```bash
-  aws-cli/2.x.x Python/3.x.x Windows/10 exe/AMD64
-
-
-#### Configure the AWS CLI
-- Run the following command:
-  ```bash
-  aws configure
-- Enter the values from your downloaded .csv file (created when setting up the IAM user):
-  ```bash
-  AWS Access Key ID [None]: <your key>
-  AWS Secret Access Key [None]: <your secret>
-  Default region name [None]: us-east-1
-  Default output format [None]: json
-- Verify the configure:
-  ```bash
-  aws sts get-caller-identity
-- Expected Output:
-  ```bash
-  {
-  "UserId": "AIDAEXAMPLE12345",
-  "Account": "123456789012",
-  "Arn": "arn:aws:iam::123456789012:user/mlops-user"
-  }
+    User->>Frontend: "Show me red shoes"
+    Frontend->>API: POST /api/chat {query}
+    
+    API->>Guardrails: Validate Input
+    Guardrails-->>API: ✓ Safe
+    
+    API->>API: Determine Filters (color, season)
+    API->>VectorDB: Similarity Search (query + filters)
+    VectorDB-->>API: Top 3 Documents (metadata + s3_uri)
+    
+    par Fetch Images
+        API->>S3: Get Image 1
+        API->>S3: Get Image 2
+        API->>S3: Get Image 3
+    end
+    S3-->>API: Base64 Images
+    
+    API->>LLM: Multimodal Prompt (text + images)
+    LLM-->>API: Fashion Advice
+    
+    API->>Guardrails: Moderate Output
+    Guardrails-->>API: ✓ Safe Response
+    
+    API->>Metrics: Log Latency, Guardrail Hits
+    API-->>Frontend: {response, recommended_items}
+    Frontend-->>User: Display Chat + Product Cards
+```
 
 ---
 
-### Step 4 — Create an S3 Bucket for Data and Models
+## 📊 Monitoring Dashboards
 
-1. Open the [S3 Console](https://s3.console.aws.amazon.com/s3/home).
-2. Click **Create bucket**.
-3. Configure:
-   - **Bucket name:** `stylesync-mlops-data` *(must be globally unique)*
-   - **Region:** `us-east-1`
-   - **Block all public access:** Enabled
-   - Leave all other settings as default.
-4. Click **Create bucket**.
+### Grafana Dashboards
 
-#### Folder Structure (prefix layout)
+Access real-time metrics at **http://localhost:3000** (default credentials: `GrafanaUser` / see `.env`)
 
-After creation, open your bucket and create the following folder structure:
+**Key Metrics Tracked:**
+- **Request Latency**: P50, P95, P99 response times
+- **Guardrail Triggers**: Input/Output validation failures by rule
+- **Error Rates**: 4xx/5xx by endpoint
+- **Throughput**: Requests per second
 
-```bash
-stylesync-mlops-data/
-└── style-sync/
-  ├── raw/ # Original Kaggle dataset
-  ├── processed/ # Cleaned & augmented data
-  ├── models/ # Trained model artifacts
-  ├── mlflow/ # Experiment tracking
-  └── monitoring/ # Drift reports & monitoring data
-```
+### LangSmith Tracing
 
-*S3 will automatically create these folders when files are uploaded. Creating them now helps organize project data clearly.*
+View detailed LLM call traces at [smith.langchain.com](https://smith.langchain.com)
 
-
+Traced operations:
+- `retrieve_documents`: Vector search performance
+- `generate_fashion_advice`: LLM generation time
+- `chat_endpoint_flow`: End-to-end request flow
 
 ---
 
-### Step 5 — Upload Dataset to S3 (from Local Machine)
+## 🚀 Deployment Guide
 
-If the dataset is already downloaded locally,
-upload it directly to the S3 bucket using the AWS CLI.
+### Prerequisites
 
-#### Command
-Run the following in PowerShell (replace the path with your local dataset directory):
+- **Python 3.9+**
+- **Node.js 18+** (for frontend)
+- **Docker & Docker Compose** (for monitoring stack)
+- **AWS Credentials** (for S3 access)
+- **Google API Key** (for Gemini)
+
+### 1. Clone Repository
 
 ```bash
-aws s3 cp "C:\path\to\fashion-dataset" s3://stylesync-mlops-data/style-sync/raw/fashion/ --recursive
+git clone https://github.com/Hammadullah2/StyleSync.git
+cd StyleSync
 ```
 
-This will recursively upload all files and folders inside `fashion-dataset/` to the S3 bucket path:
+### 2. Environment Setup
+
 ```bash
-s3://stylesync-mlops-data/style-sync/raw/fashion/
-├── images/
-├── styles/
-├── images.csv
-└── styles.csv
+# Copy example env file
+cp .env.example .env
+
+# Required variables:
+# GOOGLE_API_KEY=your_gemini_api_key
+# AWS_ACCESS_KEY_ID=your_aws_key
+# AWS_SECRET_ACCESS_KEY=your_aws_secret
+# S3_BUCKET_NAME=stylesync-mlops-data
+# LANGCHAIN_API_KEY=your_langsmith_key
 ```
----
 
-### Step 6 — Launch an EC2 Instance for MLflow Tracking Server
+### 3. Install Dependencies
 
-We’ll use an EC2 Ubuntu instance to host the MLflow Tracking UI and connect it with the S3 bucket for model artifacts.
-
-#### Launch an EC2 Instance
-
-- Go to the EC2 Console
-  - Click Launch instance → Configure:
-    - Name: `mlflow-server`
-    - AMI: `Ubuntu` Server 24.04 LTS (HVM), SSD Volume Type
-    - Architecture: `64-bit (x86)`
-    - Instance type: `t3.micro` (Free tier eligible)
-    - Key pair: Create new → name it `mlops-key.pem` → download and keep safe.
-  - Network settings:
-    - Auto-assign public IP → Enable
-    - Create a new Security Group → allow the following:
-    ```bash
-    Type        Protocol  Port Range  Source
-    SSH          TCP        22         0.0.0.0/0
-    HTTP         TCP        80         0.0.0.0/0
-    Custom TCP   TCP        5000       0.0.0.0/0   # For MLflow UI
-    ```
-    - Storage: 20 GiB (gp3).
-
-- Click **Launch instance**, then wait for the status to show **Running**.
-
-- Copy the **Public IPv4 address** — you’ll use this to connect and open the MLflow dashboard.
-
-#### Connect to EC2 via SSH
-
-From your local terminal (in the same directory where `mlops-key.pem` was downloaded):
 ```bash
-ssh -i mlops-key.pem ubuntu@<your-ec2-public-ip>
+# Backend
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# Frontend
+cd src/frontend
+npm install
+cd ../..
 ```
 
-You’ll now be inside the EC2 instance:
+### 4. Run Data Ingestion
+
 ```bash
-ubuntu@ip-xxx-xx-xx-xxx:~$
+# Ingest fashion dataset from S3
+python src/ingest.py
 ```
 
-#### Setup MLflow Tracking Server on EC2
-1. Create and activate a virtual environment (important)
+This will:
+- Download images and metadata from S3
+- Generate CLIP embeddings
+- Store vectors in ChromaDB (`./chroma_db`)
+
+### 5. Start Backend API
+
 ```bash
-sudo apt update -y
-sudo apt install python3-venv -y
-python3 -m venv mlflow-venv
-source mlflow-venv/bin/activate
+uvicorn src.app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-2. Install dependencies inside the venv
+**Verify**: Visit [http://localhost:8000/health](http://localhost:8000/health)
+
+### 6. Start Frontend
+
 ```bash
-pip install mlflow boto3
+cd src/frontend
+npm run dev
 ```
 
-**Note**:
-If you try `pip install` without a virtual environment, you’ll get the
-*externally-managed-environment* error (Ubuntu 24.04 restriction).
-Always install inside a venv to avoid this.
+**Access**: [http://localhost:3001](http://localhost:3001)
 
-3. Start the MLflow Server
+### 7. Start Monitoring Stack (Optional)
+
 ```bash
-MLFLOW_TRACKING_INSECURE_HTTP=true mlflow server \
-  --backend-store-uri sqlite:///mlflow.db \
-  --default-artifact-root s3://stylesync-mlops-data/style-sync/mlflow/ \
-  --host 0.0.0.0 \
-  --port 5000 \
-  --allowed-hosts "*" --cors-allowed-origins "*"
+docker compose up -d
 ```
 
-The `--allowed-hosts` and `--cors-allowed-origins` flags fix
-the *Invalid Host Header / 403 Forbidden* issue when accessing from a browser.
-
-4. Run MLflow persistently in the background
-
-To keep MLflow running after logout:
-```bash
-nohup bash -c 'MLFLOW_TRACKING_INSECURE_HTTP=true mlflow server \
-  --backend-store-uri sqlite:///mlflow.db \
-  --default-artifact-root s3://stylesync-mlops-data/style-sync/mlflow/ \
-  --host 0.0.0.0 --port 5000 \
-  --allowed-hosts "*" --cors-allowed-origins "*"' > mlflow.log 2>&1 &
-```
-
-To check the logs:
-```bash
-tail -f mlflow.log
-```
-
-#### Verify MLflow Dashboard
-
-Open this in your local browser: `http://<your-ec2-public-ip>:5000`
-
-You should now see the MLflow UI running live on your EC2 instance.
-
-
-# StyleSync Deployment Guide: EC2 & Local Development
-
-This guide outlines the steps for the initial, one-time setup of the **StyleSync** application on an AWS EC2 instance, and the daily workflow for development.
+This starts:
+- **Prometheus** (metrics collection): `localhost:9090`
+- **Grafana** (dashboards): `localhost:3000`
 
 ---
 
-## 1. One-Time Setup on EC2
+## 📖 API Usage Examples
 
-These steps are required only once to prepare your EC2 environment.
+### Chat Endpoint
 
-1.  **SSH into your EC2 instance**
+**Request:**
 
-    Use your private key (`mlops-key.pem`) and the public IP of your EC2 instance.
+```bash
+curl -X POST http://localhost:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "I need trendy summer shoes"
+  }'
+```
 
-    ```bash
-    ssh -i "mlops-key.pem" ubuntu@<EC2_PUBLIC_IP>
-    ```
+**Response:**
 
-2.  **Run the Setup Script**
+```json
+{
+  "response": "Here are some trendy summer options: 1. **Vibrant Sneakers**: Bold pink/blue canvas for a pop of color. 2. **Classic White Low-Tops**: Versatile and timeless. 3. **Sporty Trainers**: Comfortable for active days.",
+  "recommended_items": [
+    {
+      "productDisplayName": "Nike Women Pink Sneakers",
+      "s3_uri": "https://stylesync-mlops-data.s3.amazonaws.com/.../12345.jpg",
+      "metadata": {
+        "season": "Summer",
+        "baseColour": "Pink",
+        "year": 2023
+      }
+    }
+  ]
+}
+```
 
-    Once logged in, execute the main setup script.
+### Sample Queries
 
-    ```bash
-    bash start.sh
-    ```
+| Query | Filters Applied | Expected Results |
+|-------|----------------|------------------|
+| `"red shoes"` | Color extraction | Red footwear items |
+| `"trendy winter jacket"` | year >= 2022, season=Winter | Recent winter outerwear |
+| `"casual summer dress"` | season=Summer | Summer dresses |
+| `"blue pants"` | Color extraction | Blue trousers |
 
-    **The `setup.sh` script automatically performs the following actions:**
+### Health Check
 
-    * Updates system packages.
-    * Installs **Docker** and **Docker Compose**.
-    * Adds the `ubuntu` user to the `docker` group (for running Docker without `sudo`).
-    * Clones the **StyleSync** repository from the source.
-    * **Prompts for AWS credentials** and creates the necessary `.env` file for configuration.
-    * Builds and starts all application containers (frontend, backend, MLflow, Prometheus, Evidently).
+```bash
+curl http://localhost:8000/health
+# Response: {"status": "ok"}
+```
+
+### Metrics Endpoint
+
+```bash
+curl http://localhost:8000/metrics
+# Prometheus-format metrics
+```
 
 ---
 
-## 2. Daily Development / EC2 Workflow
+## 🧪 Testing
 
-Use this streamlined workflow to pull the latest code and restart all services for daily development or testing after the initial setup.
+### Run Unit Tests
 
-After SSHing into the EC2 instance:
+```bash
+python -m pytest -q --cov=src
+```
 
-1.  **Navigate to the project directory**
+**Coverage:** 86% (13 guardrail tests + 6 metrics tests)
 
-    ```bash
-    cd StyleSync
-    ```
+### Test Guardrails
 
-2.  **Execute the development build command**
+```bash
+python -m pytest tests/test_guardrails.py -v
+```
 
-    ```bash
-    make dev-ec2
-    ```
+### Test Metrics
 
-    **The `make dev-ec2` command executes the following tasks:**
+```bash
+python -m pytest tests/test_metrics.py -v
+```
 
-    <!-- * Pulls the latest code from the default branch of the repository.
-    * Re-builds all necessary Docker containers. -->
-    * Starts all defined services in detached mode.
+---
 
-### Access Endpoints
+## 🔒 Security
 
-All services will be accessible via your EC2 instance's public IP address:
+See [SECURITY.md](SECURITY.md) for:
+- Prompt injection defenses
+- PII detection mechanisms
+- Data privacy practices
 
-| Service | Access URL | Port |
-| :--- | :--- | :--- |
-| **Frontend** (Website) | `http://<EC2_PUBLIC_IP>:3000` | `3000` |
-| **Backend** (API) | `http://<EC2_PUBLIC_IP>:8000` | `8000` |
-| **MLflow** (Experiment Tracking) | `http://<EC2_PUBLIC_IP>:5000` | `5000` |
-| **Prometheus** (Monitoring) | `http://<EC2_PUBLIC_IP>:9090` | `9090` |
-| **Evidently** (Data Quality/Drift) | `http://<EC2_PUBLIC_IP>:7000` | `7000` |
+---
+
+## 📊 Evaluation
+
+See [EVALUATION.md](EVALUATION.md) for:
+- Prompt engineering experiments
+- Retrieval quality metrics
+- A/B test results
+
+---
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|-----------|-----------|
+| **Backend** | FastAPI, Python 3.9 |
+| **Vector DB** | ChromaDB |
+| **Embeddings** | OpenCLIP (ViT-B-32) |
+| **LLM** | Google Gemini 2.5-flash |
+| **Frontend** | Next.js 16, React, TailwindCSS |
+| **Storage** | AWS S3 |
+| **Monitoring** | Prometheus, Grafana, LangSmith |
+| **CI/CD** | GitHub Actions |
+| **Containerization** | Docker, Docker Compose |
+
+---
+
+## 📁 Project Structure
+
+```
+StyleSync/
+├── src/
+│   ├── app.py                 # FastAPI backend
+│   ├── ingest.py              # Data ingestion pipeline
+│   ├── guardrails/            # Input/output validation
+│   ├── metrics.py             # Prometheus metrics
+│   └── frontend/              # Next.js app
+├── tests/
+│   ├── test_guardrails.py     # Guardrail unit tests
+│   └── test_metrics.py        # Metrics unit tests
+├── chroma_db/                 # Vector database
+├── docker-compose.yml         # Monitoring stack
+├── .github/workflows/         # CI/CD pipelines
+├── README.md
+├── SECURITY.md
+└── EVALUATION.md
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Run tests: `python -m pytest`
+4. Commit changes: `git commit -m 'Add amazing feature'`
+5. Push to branch: `git push origin feature/amazing-feature`
+6. Open a Pull Request
+
+---
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE) file for details
+
+---
+
+## 👤 Authors
+
+- **Hammad Ullah** - [Hammadullah2](https://github.com/Hammadullah2)
+
+---
+
+## 🙏 Acknowledgments
+
+- **OpenCLIP** for vision embeddings
+- **LangChain** for RAG orchestration
+- **Google Gemini** for multimodal generation
+- **Grafana Labs** for monitoring toolkit

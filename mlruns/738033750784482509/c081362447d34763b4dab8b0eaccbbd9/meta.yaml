@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hammad/StyleSync/mlruns/738033750784482509/c081362447d34763b4dab8b0eaccbbd9/artifacts
+end_time: 1764865174916
+entry_point_name: ''
+experiment_id: '738033750784482509'
+lifecycle_stage: active
+run_id: c081362447d34763b4dab8b0eaccbbd9
+run_name: Chain-of-Thought
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764864946620
+status: 3
+tags: []
+user_id: hammad

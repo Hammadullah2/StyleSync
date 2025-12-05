@@ -5,6 +5,7 @@ import base64
 import torch
 import open_clip
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
 from langchain_chroma import Chroma
@@ -91,6 +92,21 @@ def get_image_base64(s3_uri: str) -> str:
         print(f"Error fetching image {s3_uri}: {e}")
         return None
 
+def generate_presigned_url(s3_uri: str, expiration=3600) -> str:
+    """Generate a presigned URL to share an S3 object"""
+    try:
+        parts = s3_uri.replace("s3://", "").split("/", 1)
+        bucket = parts[0]
+        key = parts[1]
+        response = s3_client.generate_presigned_url('get_object',
+                                                    Params={'Bucket': bucket,
+                                                            'Key': key},
+                                                    ExpiresIn=expiration)
+        return response
+    except Exception as e:
+        logging.error(f"Error generating presigned URL for {s3_uri}: {e}")
+        return None
+
 @traceable(name="determine_filters")
 def determine_filters(query: str) -> dict:
     """Logic Router: Determine filters based on query keywords."""
@@ -133,7 +149,7 @@ def generate_fashion_advice(query: str, images_data: List[str]):
         
     # Construct Multimodal Message
     message_content = [
-        {"type": "text", "text": f"User Query: {query}\n\nHere are some images from our catalog. Please analyze them and provide fashion advice or answer the user's request based on these specific items. Refer to them as 'the suggested items'. Be helpful and stylish in your tone."}
+        {"type": "text", "text": f"User Query: {query}\n\nHere are some images from our catalog. Please analyze them and provide fashion advice based on these specific items. Refer to them as 'the suggested items'. \n\nCRITICAL INSTRUCTION: Provide a simple list of the 3 items with a 1-sentence reason for each. NO INTRO. NO OUTRO. NO FLUFF. JUST THE LIST."}
     ]
     
     for b64 in images_data:
@@ -216,9 +232,13 @@ async def chat_endpoint_flow(request: ChatRequest):
                 b64_image = get_image_base64(s3_uri)
                 if b64_image:
                     images_data.append(b64_image)
+                    
+                    # Generate Presigned URL for Frontend
+                    presigned_url = generate_presigned_url(s3_uri)
+                    
                     recommended_items.append({
                         "productDisplayName": doc.metadata.get("productDisplayName"),
-                        "s3_uri": s3_uri,
+                        "s3_uri": presigned_url if presigned_url else s3_uri, # Use presigned if available
                         "metadata": doc.metadata
                     })
                 else:
@@ -277,3 +297,12 @@ def health():
 def metrics():
     """Prometheus metrics endpoint."""
     return Response(content=generate_latest(), media_type=CONTENT_TYPE_LATEST)
+
+# Standard CORS Configuration
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
