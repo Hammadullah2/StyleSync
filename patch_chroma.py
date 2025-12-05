@@ -26,26 +26,47 @@ def patch_chroma():
     print(f"Patching {target_file}...")
     
     with open(target_file, "r") as f:
-        content = f.read()
+        lines = f.readlines()
         
-    # The function to patch is _decode_seq_id
-    # We want to handle the case where seq_id_bytes is already an int
+    new_lines = []
+    patched = False
+    already_patched = False
     
-    func_def = "def _decode_seq_id(seq_id_bytes):"
-    patch_code = """
-    if isinstance(seq_id_bytes, int):
-        return seq_id_bytes"""
-        
-    if func_def in content:
-        if "if isinstance(seq_id_bytes, int):" in content:
-            print("File already patched.")
-        else:
-            new_content = content.replace(func_def, func_def + patch_code)
-            with open(target_file, "w") as f:
-                f.write(new_content)
-            print("Successfully patched _decode_seq_id.")
+    for line in lines:
+        new_lines.append(line)
+        if "def _decode_seq_id" in line:
+            # Check if next line is already our patch
+            # We need to be careful with reading the next line in the loop, 
+            # but since we are appending, we can just set a flag to check the next lines?
+            # Simpler: just check if the file content already has the patch string
+            pass
+
+    # Re-read content to check for existence
+    content = "".join(lines)
+    if "if isinstance(seq_id_bytes, int):" in content:
+        print("File already patched.")
+        return
+
+    # Apply patch
+    new_lines = []
+    for line in lines:
+        new_lines.append(line)
+        if "def _decode_seq_id" in line:
+            print(f"Found function at: {line.strip()}")
+            new_lines.append("    if isinstance(seq_id_bytes, int):\n")
+            new_lines.append("        return seq_id_bytes\n")
+            patched = True
+            
+    if patched:
+        with open(target_file, "w") as f:
+            f.writelines(new_lines)
+        print("Successfully patched _decode_seq_id.")
     else:
-        print("Could not find function definition to patch.")
+        print("Could not find function definition 'def _decode_seq_id' in file.")
+        # Print first few lines to debug
+        print("First 20 lines of file:")
+        for i, line in enumerate(lines[:20]):
+            print(f"{i}: {line.strip()}")
         sys.exit(1)
 
 if __name__ == "__main__":
