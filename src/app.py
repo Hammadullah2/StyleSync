@@ -211,6 +211,9 @@ async def chat_endpoint_flow(request: ChatRequest):
     # 2. Retrieval
     try:
         results = retrieve_documents(query, filters)
+        if not isinstance(results, list):
+            logging.error(f"retrieve_documents returned non-list: {type(results)} - {results}")
+            results = []
         logging.info(f"Retrieved {len(results)} documents")
     except Exception as e:
         logging.error(f"Error in retrieve_documents: {e}")
@@ -278,6 +281,12 @@ async def chat_endpoint(request: ChatRequest):
     try:
         # Track guardrail check
         is_valid, _, details = input_guardrails.validate(request.query)
+        
+        # Defensive check for details
+        if details and not isinstance(details, dict):
+             logging.error(f"Guardrail details is not a dict: {type(details)} - {details}")
+             details = {}
+
         rule = details.get('pii_types', [details.get('matched_pattern', 'unknown')])[0] if details else 'none'
         metrics_tracker.track_guardrail('input', str(rule), is_valid)
         
