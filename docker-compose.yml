@@ -49,7 +49,7 @@ services:
     image: grafana/grafana
     container_name: grafana
     ports:
-      - "3000:3000"
+      - "3001:3000"
     environment:
       - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER}
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
@@ -59,7 +59,7 @@ services:
 
   evidently:
     build:
-      context: .       # root directory
+      context: . # root directory
       dockerfile: src/app/monitoring/dockerfile.evidently
     container_name: evidently
     ports:
